@@ -8,14 +8,30 @@ var planets = [];
 var clicckato = 0;
 var distance;
 var mappedDistance;
+//planet size counter variables
+var interval;
+var mousePressedDuration = 0;
+var pressSize = 0;
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
 }
 
-function mousePressed() {
+function mousePressed(){
+  interval = setInterval(timeIt, 200);
+}
+//size related with the mouse pressed duration
+function timeIt(){
+  mousePressedDuration ++;
+  if(mousePressedDuration == 7){
+    clearInterval(interval);
+  }
+  pressSize = map(mousePressedDuration, 0, 7, 5, 70);
+  console.log(pressSize);
+}
+
+function mouseReleased() {
   for (var i = 0; i < 1; i++) {
  //distances that will be used to set the velocity of the planet
     distance = dist(mouseX, mouseY, width/2, height/2);
@@ -28,15 +44,20 @@ function mousePressed() {
     var reald = 0.1 - mappedDistance;
     console.log(reald);
   //adding a new planet
-    newPlanet = new Planet(mouseX, mouseY, 30, reald);
+    newPlanet = new Planet(mouseX, mouseY, pressSize, reald);
     planets.push(newPlanet);
   }
   //aggiungo valore ad un counter che mi azionerà display
   clicckato++;
+  //riporto a zero durata mouse pressed
+  clearInterval(interval);
+  mousePressedDuration = 0;
+  pressSize = 0;
 }
 
 function draw() {
   background(0);
+  console.log(mousePressedDuration);
   //centrare sketch
   translate(width / 2, height / 2);
 
