@@ -16,7 +16,10 @@ var pressSize = 0;
 //velocity increment animation
 var intervalAnimation;
 var completedAnimation = 0;
+var holdingTime = 80;
+// holding time 80, interval 30, inc 0,01
 var uploaded = false;
+var uploadFinish = 0;
 var pd = 0;
 
 //console.log(uploaded);
@@ -47,6 +50,7 @@ function timeIt() {
 //VELOCITY INCREMENT and UPLOAD BAR
 function keyPressed(e) {
   pd++;
+  //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
   intervalAnimation = setInterval(uploadGalaxy, 30);
   if (pd === 1) {
@@ -54,18 +58,33 @@ function keyPressed(e) {
   }
 }
 function uploadGalaxy() {
-  completedAnimation++;
-  if (completedAnimation == 81) {
-    clearInterval(intervalAnimation);
-    //chiamo funzione per cancellare tutto
-  }
-  if (completedAnimation <= 80) {
+  if (keyIsPressed == true && completedAnimation <= holdingTime) {
+    completedAnimation++;
     for (var i = 0; i < planets.length; i++) {
       planets[i].setIncremento(0.01)
       console.log(planets[i].incremento);
+      console.log(planets[i].velocity);
     }
+  }
+  console.log(completedAnimation);
+  if (completedAnimation >= holdingTime + 1) {
+    uploadFinish++;
+    clearInterval(intervalAnimation);
+    //chiamo funzione per cancellare tutto
+    newBar.noBar();
+  }
+  if (completedAnimation <= holdingTime) {
     newBar.sizeWidth = completedAnimation * 5;
   }
+  if (keyIsPressed == false && completedAnimation > 0 && uploadFinish <= 1) {
+    completedAnimation--;
+    for (var k = 0; k < planets.length; k++) {
+      planets[k].setIncremento(-0.01)
+      console.log(planets[k].incremento);
+      console.log(planets[k].velocity);
+    }
+  }
+  //uploading bar
   uploaded = true;
 }
 //CREAZIONE PLANETS
@@ -92,6 +111,7 @@ function mouseReleased() {
   mousePressedDuration = 0;
   pressSize = 0;
 }
+
 function draw() {
   //console.log(uploaded);
 
@@ -118,16 +138,19 @@ function draw() {
   //PLANETS VELOCITY AVERAGE
   var somma = 0;
   var average;
-  for(var i = 0; i < planets.length; i ++) {
+  for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
-    console.log(i + 'corrisponde' + planets[i].velocity);
+    //console.log(i + 'corrisponde' + planets[i].velocity);
   }
-  console.log(somma);
+  //console.log(somma);
   average = somma / planets.length;
-  console.log(average);
+  //console.log(average);
   //display Bar
   if (completedAnimation > 0) {
     newBar.display();
+  }
+  if (completedAnimation > 80) {
+    newBar.noBar();
   }
 }
 //FUNCTION PREVIEW
@@ -145,20 +168,37 @@ function PlanetPrev(_x, _y, _size) {
 }
 //FUNCTION UPLOAD BAR
 function UploadBar() {
-  this.sizeWidth = 40;
+  this.sizeWidth = 400;
+  this.sizeWidthTwo = 400;
+  this.sizeHeight = 50 ;
+  this.x = width / 2 - this.sizeWidthTwo/2;
+  this.y = height / 2 + canvasDimension + 20;
+  this.opacity= 0;
   this.display = function(_width) {
+    //static rect
     push();
     stroke(255);
     strokeWeight(2);
-    rect(width / 2 - 200, height / 2 + canvasDimension + 70, 400, 50);
+    noFill();
+    rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight);
     pop();
+    //growing rect
     push();
-    stroke(255);
-    strokeWeight(2);
-    fill(0);
-    rect(width / 2 - 200, height / 2 + canvasDimension + 70, this.sizeWidth, 50);
+    noStroke();
+    fill(255,0,0,255);
+    rect(this.x, this.y, this.sizeWidth, this.sizeHeight);
     pop();
     this.noBar = function() {
+      noStroke();
+ this.sizeWidth = 0;
+ this.sizeWidthTwo = 0;
+ this.sizeHeight = 0;
+ push();
+ fill(255);
+ textAlign(CENTER);
+ textSize(30);
+ text('System Uploaded', width/2 , height / 2 + canvasDimension + 53);
+ pop();
     }
   }
 }
