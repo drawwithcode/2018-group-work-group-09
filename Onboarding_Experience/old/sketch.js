@@ -49,65 +49,65 @@ var position = {'x':0, 'y':0 }
 // };
 
 // With the same locig, you can create as many canvas as you want
-var sketch2 = function( p ) {
-  // function draw() {
-  //   p.background(50);
-  //   p.fill(255);
-  //   p.textSize(10);
-  //   p.text(hd, 40, 80);
-  // }
-var hd = "Ops there's something wrong here!\nDark Matter(s)\nA project about something you still don’t know\nIf you can see it it means it exists If you can’t see it,\nit exists (Tutorial elemento centrale con ordini)\nYou are now floating in the universe.\nCreate your own galaxy and learn more about\nhow things move up here!\nTo start a new galaxy, simply PRESS YOUR MOUSE."
-  // The following are variables accessible ONLY from within this canvas.
-  // var dragging = false;
-  // var bg_col = p.color('green');
-  // var bg_col_dragging = p.color(100,255,100);
-  // Ordinary p5js functions preceded by 'p.'
-  p.setup = function() {
-    var canvas = p.createCanvas(p.windowWidth/3.6, p.windowHeight)
-      p.noLoop();
-    // place the canvas in the object with the id "green-canvas"
-    // canvas.parent('green-canvas');
-  };
-  p.draw = function() {
-    // p.background(50);
-    // p.fill(255);
-    // p.textSize(200);
-    // p.text(hd, 50, 80);
-
-    p.push();
-    p.background(50);
-    p.fill('WHITE');
-    p.textFont('Source Code Pro');
-    p.noStroke();
-    p.textSize(25);
-    p.text(hd, 20, 30);
-    p.pop();
-
-
-    // if (dragging == true) {
-    //   // Even variables such as 'mouseX' need to be written as 'p.mouseX'
-    //   position.x = p.mouseX;
-    //   position.y = p.mouseY;
-    //   p.background(bg_col_dragging);
-    // } else {
-    //   p.background(bg_col);
-    // }
-    // p.ellipse(position.x, position.y, 50)
+// var sketch2 = function( p ) {
+//   // function draw() {
+//   //   p.background(50);
+//   //   p.fill(255);
+//   //   p.textSize(10);
+//   //   p.text(hd, 40, 80);
+//   // }
+// var hd = "Ops there's something wrong here!\nDark Matter(s)\nA project about something you still don’t know\nIf you can see it it means it exists If you can’t see it,\nit exists (Tutorial elemento centrale con ordini)\nYou are now floating in the universe.\nCreate your own galaxy and learn more about\nhow things move up here!\nTo start a new galaxy, simply PRESS YOUR MOUSE."
+//   // The following are variables accessible ONLY from within this canvas.
+//   // var dragging = false;
+//   // var bg_col = p.color('green');
+//   // var bg_col_dragging = p.color(100,255,100);
+//   // Ordinary p5js functions preceded by 'p.'
+//   p.setup = function() {
+//     var canvas = p.createCanvas(p.windowWidth/3.6, p.windowHeight)
+//       p.noLoop();
+//     // place the canvas in the object with the id "green-canvas"
+//     // canvas.parent('green-canvas');
 //   };
-//   p.mousePressed = function() {
-//     // The 'dist()' function becames 'p.dist()'
-//     var dist = p.dist(position.x, position.y, p.mouseX, p.mouseY)
-//     if ( dist <= 25 ) {
-//       dragging = true;
-//     }
-//   }
-//   p.mouseReleased = function() {
-//     dragging = false;
-//   }
-p.windowResized = function (){
-  p.resizeCanvas(p.windowWidth/3.6, p.windowHeight);
-}
-}};
+//   p.draw = function() {
+//     // p.background(50);
+//     // p.fill(255);
+//     // p.textSize(200);
+//     // p.text(hd, 50, 80);
+//
+//     p.push();
+//     p.background(50);
+//     p.fill('WHITE');
+//     p.textFont('Source Code Pro');
+//     p.noStroke();
+//     p.textSize(25);
+//     p.text(hd, 20, 30);
+//     p.pop();
+//
+//
+//     // if (dragging == true) {
+//     //   // Even variables such as 'mouseX' need to be written as 'p.mouseX'
+//     //   position.x = p.mouseX;
+//     //   position.y = p.mouseY;
+//     //   p.background(bg_col_dragging);
+//     // } else {
+//     //   p.background(bg_col);
+//     // }
+//     // p.ellipse(position.x, position.y, 50)
+// //   };
+// //   p.mousePressed = function() {
+// //     // The 'dist()' function becames 'p.dist()'
+// //     var dist = p.dist(position.x, position.y, p.mouseX, p.mouseY)
+// //     if ( dist <= 25 ) {
+// //       dragging = true;
+// //     }
+// //   }
+// //   p.mouseReleased = function() {
+// //     dragging = false;
+// //   }
+// p.windowResized = function (){
+//   p.resizeCanvas(p.windowWidth/3.6, p.windowHeight);
+// }
+// }};
 
 
 
