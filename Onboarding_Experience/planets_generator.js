@@ -1,6 +1,8 @@
-function preload() {
-  // put preload code here
-}
+var sketch1 = function( p ) {
+
+
+
+
 var canvasDimension = 350;
 var newPlanet;
 var planets = [];
@@ -22,57 +24,71 @@ var uploaded = false;
 var uploadFinish = 0;
 var pd = 0;
 
+var burst = new mojs.Burst({
+  left: 0, top: 0,
+  radius : { 30 : 43},
+  angle : {200: 360},
+  count:10,
+  children : {
+    radius : {6 : 0},
+    fill: 'white',
+    shape: 'zigzag',
+    duration: 2000,
+    x : 300,
+  }
+})
+var circle_options ={
+  left: 0, top: 0,
+  radius : {10 : 30},
+  fill : 'none',
+  stroke : 'white',
+  opacity : {1 : 0},
+  duration : 700,
+}
+var circ = new mojs.Shape({
+  ...circle_options
+})
+var circ2 = new mojs.Shape({
+  ...circle_options,
+  delay : 200
+})
+var timeline = new mojs.Timeline({
+  repeat:999,
+})
+// .add(burst, circ, circ2)
+
+circ.play();
+
 //console.log(uploaded);
 
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
+p.setup = function() {
+  var canvas = p.createCanvas((p.windowWidth / 4 * 3), p.windowHeight);
+  canvas.parent("sketch1");
   //ANIMATION MOJS sun
-  const burst = new mojs.Burst({
-    radius : { 30 : 43},
-    angle : {200: 360},
-    count:10,
-    children : {
-      radius : {6 : 0},
-      fill: 'white',
-      shape: 'zigzag',
-      duration: 2000,
-    }
-  })
-  const circ = new mojs.Shape({
-    radius : {30 : 100},
-    fill : 'none',
-    stroke : 'white',
-    opacity : {1 : 0},
-    duration : 3000,
-  })
-  const timeline = new mojs.Timeline({
-    repeat:999,
-  })
-  .add(burst, circ)
-  .play();
+
 }
 //PLANET SIZE PREVIEW
-function mousePressed() {
+p.mousePressed = function() {
   interval = setInterval(timeIt, 50);
-  newPlanetPrev = new PlanetPrev(mouseX, mouseY, pressSize);
+  newPlanetPrev = new PlanetPrev(p.mouseX, p.mouseY, pressSize);
   //planetsPrev.push(newPlanetPrev);
 }
 //size related with the mouse pressed duration
 function timeIt() {
   mousePressedDuration++;
-  distance = dist(mouseX, mouseY, width / 2, height / 2);
+  distance = p.dist(p.mouseX, p.mouseY, p.width / 2, p.height / 2);
   if (mousePressedDuration == 28) {
     clearInterval(interval);
   }
-  pressSize = map(mousePressedDuration, 0, 28, 5, 70);
+  pressSize = p.map(mousePressedDuration, 0, 28, 5, 70);
   // console.log(pressSize);
   if (distance <= canvasDimension && uploaded === false) {
     newPlanetPrev.size = pressSize;
   }
 }
 //VELOCITY INCREMENT and UPLOAD BAR
-function keyPressed(e) {
+p.keyPressed = function(e) {
   pd++;
   //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
@@ -82,7 +98,7 @@ function keyPressed(e) {
   }
 }
 function uploadGalaxy() {
-  if (keyIsPressed == true && completedAnimation <= holdingTime) {
+  if (p.keyIsPressed == true && completedAnimation <= holdingTime) {
     completedAnimation++;
     for (var i = 0; i < planets.length; i++) {
       planets[i].setIncremento(0.01)
@@ -100,7 +116,7 @@ function uploadGalaxy() {
   if (completedAnimation <= holdingTime) {
     newBar.sizeWidth = completedAnimation * 5;
   }
-  if (keyIsPressed == false && completedAnimation > 0 && uploadFinish <= 1) {
+  if (p.keyIsPressed == false && completedAnimation > 0 && uploadFinish <= 1) {
     completedAnimation--;
     for (var k = 0; k < planets.length; k++) {
       planets[k].setIncremento(-0.01)
@@ -112,17 +128,24 @@ function uploadGalaxy() {
   uploaded = true;
 }
 //CREAZIONE PLANETS
-function mouseReleased() {
+p.mouseReleased = function () {
+  p.push();
+  burst.play();
+  circ.play();
+  var coords = { x: p.mouseX, y: p.mouseY };
+  burst.tune(coords);
+  circ.tune(coords);
+  p.pop();
   //distances that will be used to set the velocity of the planet
-  distance = dist(mouseX, mouseY, width / 2, height / 2);
-  mappedDistance = map(distance, 0, canvasDimension, 0.01, 0.08);
+  distance = p.dist(p.mouseX, p.mouseY, p.width / 2, p.height / 2);
+  mappedDistance = p.map(distance, 0, canvasDimension, 0.01, 0.08);
   var reald = 0.1 - mappedDistance;
   console.log(distance);
   console.log(reald);
   //adding a new planet
   //stop producing planets after the upload
   if (uploaded === false) {
-    newPlanet = new Planet(mouseX, mouseY, pressSize, reald);
+    newPlanet = new Planet(p.mouseX, p.mouseY, pressSize, reald);
     //dipenderà dalle dimensioni del canvas, il limite oltre il quake non crea più pallini
     if (distance < canvasDimension) {
       planets.push(newPlanet);
@@ -136,30 +159,32 @@ function mouseReleased() {
   pressSize = 0;
 }
 
-function draw() {
+p.draw = function() {
+
+
   //console.log(uploaded);
 
-  background(0);
+  p.background(0);
   //SUN
-  push();
-  stroke(255);
-  strokeWeight(2);
-  fill(0);
-  ellipse(width / 2, height / 2, 40);
-  pop();
+  p.push();
+  p.stroke(255);
+  p.strokeWeight(2);
+  p.fill(0);
+  p.ellipse(p.width / 2, p.height / 2, 40);
+  p.pop();
   //display PREVIEW
-  if (mouseIsPressed) {
+  if (p.mouseIsPressed) {
     newPlanetPrev.display();
   }
   //display PLANETS
-  push();
-  translate(width / 2, height / 2);
+  p.push();
+  p.translate(p.width / 2, p.height / 2);
   if (clicckato != 0) {
     for (var j = 0; j < planets.length; j++) {
       planets[j].display();
     }
   }
-  pop();
+  p.pop();
   //PLANETS VELOCITY AVERAGE
   var somma = 0;
   var average;
@@ -185,10 +210,10 @@ function PlanetPrev(_x, _y, _size) {
   this.size = _size;
 
   this.display = function() {
-    push();
-    fill(255, 100);
-    ellipse(mouseX, mouseY, this.size);
-    pop();
+    p.push();
+    p.fill(255, 100);
+    p.ellipse(p.mouseX, p.mouseY, this.size);
+    p.pop();
   }
 }
 //FUNCTION UPLOAD BAR
@@ -196,34 +221,34 @@ function UploadBar() {
   this.sizeWidth = 400;
   this.sizeWidthTwo = 400;
   this.sizeHeight = 50 ;
-  this.x = width / 2 - this.sizeWidthTwo/2;
-  this.y = height / 2 + canvasDimension + 20;
+  this.x = p.width / 2 - this.sizeWidthTwo/2;
+  this.y = p.height / 2 + canvasDimension + 20;
   this.opacity= 0;
   this.display = function(_width) {
     //static rect
-    push();
-    stroke(255);
-    strokeWeight(2);
-    noFill();
-    rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight);
-    pop();
+    p.push();
+    p.stroke(255);
+    p.strokeWeight(2);
+    p.noFill();
+    p.rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight);
+    p.pop();
     //growing rect
-    push();
-    noStroke();
-    fill(255,0,0,255);
-    rect(this.x, this.y, this.sizeWidth, this.sizeHeight);
-    pop();
+    p.push();
+    p.noStroke();
+    p.fill(255,0,0,255);
+    p.rect(this.x, this.y, this.sizeWidth, this.sizeHeight);
+    p.pop();
     this.noBar = function() {
-      noStroke();
+      p.noStroke();
  this.sizeWidth = 0;
  this.sizeWidthTwo = 0;
  this.sizeHeight = 0;
- push();
- fill(255);
- textAlign(CENTER);
- textSize(30);
- text('System Uploaded', width/2 , height / 2 + canvasDimension + 53);
- pop();
+ p.push();
+ p.fill(255);
+ p.textAlign(p.CENTER);
+ p.textSize(30);
+ p.text('System Uploaded', p.width/2 , p.height / 2 + canvasDimension + 53);
+ p.pop();
     }
   }
 }
@@ -242,11 +267,13 @@ function Planet(_x, _y, _size, _velocity) {
   }
   this.display = function() {
     this.angle += this.velocity;
-    push()
-    rotate(this.angle);
-    translate(this.x - width / 2, this.y - height / 2);
-    ellipse(0, 0, this.size);
-    pop()
+    p.push()
+    p.rotate(this.angle);
+    p.translate(this.x - p.width / 2, this.y - p.height / 2);
+    p.ellipse(0, 0, this.size);
+    p.pop()
   }
 
 }
+}
+var p5_red = new p5(sketch1);

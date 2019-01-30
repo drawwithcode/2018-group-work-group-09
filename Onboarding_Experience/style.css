@@ -1,0 +1,40 @@
+html, body{
+  margin: 0; padding: 0; border: 0; height: 100%; width: 100%;
+  overflow: hidden; background: black;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+#sketchWrapper{
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+#sketch2{
+  width: 25%;
+  height: 100vh;
+  padding: 25px;
+  overflow: auto;
+  background: darkgrey;
+  margin: 0;
+}
+
+span{
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Inconsolata', sans-serif;
+  letter-spacing: 2px;
+  display: block;
+  opacity: 0;
+  margin-bottom: 25px;
+}
+
+span.is-visible{
+  opacity: 1;
+}
