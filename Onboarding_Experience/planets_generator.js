@@ -1,8 +1,5 @@
 var sketch1 = function( p ) {
 
-
-
-
 var canvasDimension = 350;
 var newPlanet;
 var planets = [];
@@ -23,7 +20,7 @@ var holdingTime = 80;
 var uploaded = false;
 var uploadFinish = 0;
 var pd = 0;
-
+//Mojs variables
 var burst = new mojs.Burst({
   left: 0, top: 0,
   radius : { 30 : 43},
@@ -34,7 +31,7 @@ var burst = new mojs.Burst({
     fill: 'white',
     shape: 'zigzag',
     duration: 2000,
-    x : 300,
+    // x : 300,
   }
 })
 var circle_options ={
@@ -43,7 +40,7 @@ var circle_options ={
   fill : 'none',
   stroke : 'white',
   opacity : {1 : 0},
-  duration : 700,
+  duration : 500,
 }
 var circ = new mojs.Shape({
   ...circle_options
@@ -57,7 +54,6 @@ var timeline = new mojs.Timeline({
 })
 // .add(burst, circ, circ2)
 
-circ.play();
 
 //console.log(uploaded);
 
@@ -129,13 +125,6 @@ function uploadGalaxy() {
 }
 //CREAZIONE PLANETS
 p.mouseReleased = function () {
-  p.push();
-  burst.play();
-  circ.play();
-  var coords = { x: p.mouseX, y: p.mouseY };
-  burst.tune(coords);
-  circ.tune(coords);
-  p.pop();
   //distances that will be used to set the velocity of the planet
   distance = p.dist(p.mouseX, p.mouseY, p.width / 2, p.height / 2);
   mappedDistance = p.map(distance, 0, canvasDimension, 0.01, 0.08);
@@ -144,12 +133,21 @@ p.mouseReleased = function () {
   console.log(reald);
   //adding a new planet
   //stop producing planets after the upload
-  if (uploaded === false) {
+  if (uploaded === false && distance < canvasDimension) {
+    //animation
+    //burst.play();
+    circ.play();
+    var coords = { x: p.mouseX, y: p.mouseY };
+    var endSize = p.map(pressSize, 0, 28, 3, 45);
+    //var endAnimation = p.map(pressSize, 0, 28, 800,2000);
+    var animationSize = {radius: { 0 : endSize}};
+    //var animationTime = {duration: endAnimation};
+    //burst.tune(coords);
+    circ.tune(coords);
+    circ.tune(animationSize);
+    //circ.tune(animationTime);
     newPlanet = new Planet(p.mouseX, p.mouseY, pressSize, reald);
-    //dipenderà dalle dimensioni del canvas, il limite oltre il quake non crea più pallini
-    if (distance < canvasDimension) {
-      planets.push(newPlanet);
-    }
+    planets.push(newPlanet);
     //aggiungo valore ad un counter che mi azionerà display
     clicckato++;
   }
@@ -160,12 +158,11 @@ p.mouseReleased = function () {
 }
 
 p.draw = function() {
-
-
-  //console.log(uploaded);
-
   p.background(0);
   //SUN
+  var coords = { x: (p.width / 2), y: (p.height / 2) };
+  burst.tune(coords);
+  burst.play();
   p.push();
   p.stroke(255);
   p.strokeWeight(2);
@@ -203,7 +200,7 @@ p.draw = function() {
     newBar.noBar();
   }
 }
-//FUNCTION PREVIEW
+// //FUNCTION PREVIEW
 function PlanetPrev(_x, _y, _size) {
   this.x = _x;
   this.y = _y;
@@ -215,7 +212,7 @@ function PlanetPrev(_x, _y, _size) {
     p.ellipse(p.mouseX, p.mouseY, this.size);
     p.pop();
   }
-}
+ }
 //FUNCTION UPLOAD BAR
 function UploadBar() {
   this.sizeWidth = 400;
