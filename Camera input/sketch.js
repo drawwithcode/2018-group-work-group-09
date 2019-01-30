@@ -20,11 +20,11 @@ function setup() {
     capture.hide();
 }
 
-// [r g b a] r g b a r g b a ...
+
 function draw() {
     image(capture, 0, 0, w, h);
     capture.loadPixels();
-    if (capture.pixels.length > 0) { // don't forget this!
+    if (capture.pixels.length > 0) {
         var total = 0;
         var i = 0;
         for (var y = 0; y < h; y++) {
@@ -40,7 +40,7 @@ function draw() {
         select('#average-color').elt.style.backgroundColor = 'rgb(' + avg + ',' + avg + ',' + avg + ')';
     }
     console.log(avg)
-    if (avg<10){
+    if (avg<0){
       // fill(255)
       // stroke(0)
       // ellipse(100,100,100)
