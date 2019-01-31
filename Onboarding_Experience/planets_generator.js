@@ -54,7 +54,11 @@ var timeline = new mojs.Timeline({
   repeat:999,
 })
  .add(burst);
-
+//Text VARIABLES
+var span4;//velocity average
+var span1;
+var span2;
+var span3;
 
 
 
@@ -83,23 +87,33 @@ burst.tune(coords);
   //display PREVIEW
   if ( mouseIsPressed) {
     newPlanetPrev.display();
+
   }
   //PLANETS VELOCITY AVERAGE
   var somma = 0;
-  var average;
+  var average= 0;
+  var mappedAverage;
   for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
     console.log(i + 'corrisponde' + planets[i].velocity);
   }
   //console.log(somma);
   average = somma / planets.length;
-  console.log(average);
+  mappedAverage = map(average, 0.01,0.1, 0, 100);
+  //type velocity average
+  span4 = select('.span4');
+  span2= select('.span2');
+  console.log(span4);
+  span4.html("Planets' velocity average:"+mappedAverage + "km/h");
+  //SYSTEM UPLOAD
   //display Bar
   if (completedAnimation > 0) {
     newBar.display();
   }
   if (completedAnimation > 80) {
     newBar.noBar();
+    span2.html('Nuovo testo blablabla');
+    span4.style('color','RED');
   }
   //display PLANETS
    push();
