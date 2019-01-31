@@ -30,6 +30,7 @@ function timeIt() {
 function uploadGalaxy() {
   if ( keyIsPressed == true && completedAnimation <= holdingTime) {
     completedAnimation++;
+    barLenght++;
     for (var i = 0; i < planets.length; i++) {
       planets[i].setIncremento(0.01)
       console.log(planets[i].incremento);
@@ -44,10 +45,11 @@ function uploadGalaxy() {
     newBar.noBar();
   }
   if (completedAnimation <= holdingTime) {
-    newBar.sizeWidth = completedAnimation * 5;
+    newBar.sizeWidth = barLenght * 4.4;
   }
   if ( keyIsPressed == false && completedAnimation > 0 && uploadFinish <= 1) {
     completedAnimation--;
+    barLenght--;
     for (var k = 0; k < planets.length; k++) {
       planets[k].setIncremento(-0.01)
       console.log(planets[k].incremento);

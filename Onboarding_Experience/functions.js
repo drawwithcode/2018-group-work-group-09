@@ -23,15 +23,15 @@ function PlanetPrev(_x, _y, _size) {
      //static rect
       push();
       stroke(255);
-      strokeWeight(2);
+      strokeWeight(3);
       noFill();
-      rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight);
+      rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight,50);
       pop();
      //growing rect
       push();
       noStroke();
-      fill(255,0,0,255);
-      rect(this.x, this.y, this.sizeWidth, this.sizeHeight);
+      fill(255);
+      rect(this.x , this.y , this.sizeWidth , this.sizeHeight,50);
       pop();
      this.noBar = function() {
         noStroke();
@@ -42,7 +42,7 @@ function PlanetPrev(_x, _y, _size) {
    fill(255);
    textAlign( CENTER);
    textSize(30);
-   text('System Uploaded',  width/2 ,  height / 2 + canvasDimension + 53);
+   text('System Uploaded',  width/2 ,  height / 2 + canvasDimension);
    pop();
      }
    }

@@ -17,6 +17,7 @@ var pressSize = 0;
 var intervalAnimation;
 var completedAnimation = 0;
 var holdingTime = 80;
+var barLenght = 10;
     // holding time 80, interval 30, inc 0,01
 var uploaded = false;
 var uploadFinish = 0;
