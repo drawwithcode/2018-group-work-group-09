@@ -72,9 +72,9 @@ Now everything is
 
 For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes. Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
 
-<img src="images/StaticDarkMatter_1.jpg" width="30%" align="right">
-<img src="images/StaticDarkMatter_3.jpg" width="36.5%" align="center">
-<img src="images/StaticDarkMatter_2.jpg" width="30%" align="left">
+<img src="images/StaticDarkMatter_1.jpg" width="30%" float="left">
+<img src="images/StaticDarkMatter_3.jpg" width="36.5%" float="left">
+<img src="images/StaticDarkMatter_2.jpg" width="30%" float="left">
 <p align="center" style="padding:0px">
     <em style="font-size:10pt">Different visualizations on how the scientists represent the dark matter</em>
 </p>
