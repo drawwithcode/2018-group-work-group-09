@@ -31,7 +31,7 @@ var iterator = 1;
         return true;
       }
 
-      el.data('animated', true);
+      el.data('animated', false);
 
 
       if (options.text) {
