@@ -1,26 +1,23 @@
-<span style="font-size:48pt;font-weight:bold"> DARK MATTER(S) </span>
+# DARK MATTER(S)
 
 A project about something you can't see but exists. Gioco di parole
 
 <img src="images/Sfondo%20stellato.png"/>
 
 ---
-<br>
-<p style="font-size:28pt;font-weight:bold"> TEAM MEMBERS </p>
+###### TEAM MEMBERS
 
 Lea Fabiano, Elena Filippi, Serena Milesi, Jacopo Perico
 
 ---
-<br>
-<span style="font-size:28pt;font-weight:bold"> COURSE REFERENCES AND ACADEMIC YEAR </span>
+###### COURSE REFERENCES AND ACADEMIC YEAR
 
 [Creative Coding 2018/2019](https://drawwithcode.github.io/2018/)<br>
 Politecnico di Milano - Scuola del Design<br>
 Faculty: Michele Mauri, Tommaso Elli
 
 ---
-<br>
-<span font-size="28pt"> ABOUT THE PROJECT </span>
+###### ABOUT THE PROJECT
 
 **Our project is about the discover of Dark Matter.** <br>
 What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments.
@@ -48,12 +45,11 @@ Understanding dark matter will also aid in definitively explaining the formation
 With this project we would like to make the user live the challenge born from the observation of sensitive reality (which escapes some laws of physics studied) and that through several demonstrations has led man to ask himself a question: **is there something that we can not know, see and experience?** And if so, **what form has it?** (which represents a bit the direction in which many researches are moving).
 
 ---
-<br>
-<span style="font-size:28pt;font-weight:bold"> DESIGN CHALLENGES </span>
+###### DESIGN CHALLENGES
 
 Initially, we though it could be interesting to show how things should work in space according to Kepler's discoveries: this would help the user to familiarize with physics concepts about celestial bodies and the rules that control the universe.
 
-### Website experience <span style="font-size:28pt">💅🏼</span>
+#### Website experience <span style="font-size:28pt">💅🏼</span>
 
 In order to do so we divided the experience in three different steps:
 
@@ -68,13 +64,13 @@ The second step allows you to "upload you solar system" into the galaxy and see 
 **Step #3**<br>
 Now everything is 
 
-### Visual design
+#### Visual design
 
 For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes. Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
 
-<img src="images/StaticDarkMatter_1.jpg" width="30%" float="left">
-<img src="images/StaticDarkMatter_3.jpg" width="36.5%" float="left">
-<img src="images/StaticDarkMatter_2.jpg" width="30%" float="left">
+<img src="images/StaticDarkMatter_1.jpg" width="10%" float="left">
+<img src="images/StaticDarkMatter_3.jpg" width="10%" float="left">
+<img src="images/StaticDarkMatter_2.jpg" width="10%" float="left">
 <p align="center" style="padding:0px">
     <em style="font-size:10pt">Different visualizations on how the scientists represent the dark matter</em>
 </p>
@@ -90,17 +86,16 @@ Looking at different images the scientist use to represent dark matter we immedi
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
 
-### Innovative ideas
+#### Innovative ideas
 
 1. Planets float with a different velocity once you go to the 
 2. The idea to have a console element in the 
 3. Invert colours and covering the webcam
  
 ---
-<br>
-<span style="font-size:28pt;font-weight:bold"> CODE CHANGELLES </span>
+###### CODE CHANGELLES
 
-### Basic canvasses structure
+#### Basic canvasses structure
 P: One of first problems we had was trying to figure out how to build the basic structure of the website. This is because we had many
 
 S: We decided to use the *html* language and *css* attributes to create a new template for the canvas and the text in order to link the .js animation we needed for the "console effect". Every paragraph now is insered into a ```<span>``` tag.
@@ -117,7 +112,7 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 2. Perline noise
 3. Web cam
 
-### Text flipping animation
+#### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
 
 S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
@@ -129,7 +124,6 @@ function easy
 ```
 
 ---
-<br>
-<span style="font-size:28pt;font-weight:bold"> INSPIRATION AND REFERENCES </span>
+###### INSPIRATION AND REFERENCES
 
 -
