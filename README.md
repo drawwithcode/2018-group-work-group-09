@@ -6,7 +6,7 @@ A project about something you can't see but exists. Gioco di parole
 
 ---
 <br>
-<span style="font-size:28pt;font-weight:bold"> TEAM MEMBERS </span>
+<p style="font-size:28pt;font-weight:bold"> TEAM MEMBERS </p>
 
 Lea Fabiano, Elena Filippi, Serena Milesi, Jacopo Perico
 
