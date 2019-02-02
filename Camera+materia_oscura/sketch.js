@@ -71,6 +71,7 @@ var zoff = 0;
 
 module = noise;
 //altre variabili--
+var avg;
 
 function setup() {
   //CAMERA CAPTURE
@@ -90,13 +91,15 @@ function setup() {
   canvas.position(0,0);
   canvas.style('z-index', '-1');
   capture.hide();
-  materia_oscura_setup()
+
 //by planets_generator.js
   var coords = { x: width/2, y: height/2};
 burst.tune(coords);
 }
 
 function draw() {
+  //console.log(frameCount);
+  //CAMERA CAPTURE
   // image(capture, 0, 0, w, h);
   capture.loadPixels();
   ;
@@ -112,7 +115,7 @@ function draw() {
     }
     var n = w * h;
     var avg = int(total / n);
-    console.log(avg)
+    //console.log(avg)
     select('#average-color').elt.style.backgroundColor = 'rgb(' + avg + ',' + avg + ',' + avg + ')';
   }
 
@@ -141,7 +144,7 @@ function draw() {
   var mappedAverage;
   for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
-    console.log(i + 'corrisponde' + planets[i].velocity);
+    //console.log(i + 'corrisponde' + planets[i].velocity);
   }
   //console.log(somma);
   average = somma / planets.length;
@@ -149,7 +152,7 @@ function draw() {
   //type velocity average
   span4 = select('.span4');
   span2= select('.span2');
-  console.log(span4);
+  //console.log(span4);
   span4.html("Planets' velocity average:"+mappedAverage + "km/h");
   //SYSTEM UPLOAD
   //display Bar
@@ -160,6 +163,8 @@ function draw() {
     newBar.noBar();
     span2.html('Nuovo testo blablabla');
     span4.style('color','RED');
+    materia_oscura_setup()
+
   }
   //display PLANETS
    push();
@@ -168,10 +173,10 @@ function draw() {
     for (var j = 0; j < planets.length; j++) {
       planets[j].display();
       //console.log(planets)
+    };
 
-    }
-  }
    pop();
+}
 }
 
 function windowResized() {

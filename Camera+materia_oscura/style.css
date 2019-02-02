@@ -29,12 +29,16 @@ span{
   line-height: 26px;
   font-weight: normal;
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: 'Inconsolata', sans-serif;
   letter-spacing: 2px;
   display: block;
   opacity: 0;
   margin-bottom: 25px;
+}
+
+.span2 {
+text-transform: uppercase;  
 }
 
 span.is-visible{

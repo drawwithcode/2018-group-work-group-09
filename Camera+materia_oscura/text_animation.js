@@ -1,4 +1,6 @@
 var iterator = 1;
+var newIterator = 0;
+var options
 
 (function($) {
 
@@ -10,8 +12,9 @@ var iterator = 1;
       "fps": 15, // Frames Per Second
       "text": "", // Use this text instead of the contents
       "callback": function() {
-        iterator++;
-          $(".span" + iterator).shuffleLetters();
+        //era iterator ++
+        iterator=2;
+          $(".span" + (iterator+newIterator)).shuffleLetters();
       }
 
 
@@ -83,9 +86,12 @@ var iterator = 1;
 
           // The animation is complete. Updating the
           // flag and triggering the callback;
-
-          el.data('animated', false);
+          //ho modificato questo.
+          if(iterator!=2){
           options.callback(el);
+          }
+          
+          el.data('animated', false);
           return;
         }
 
