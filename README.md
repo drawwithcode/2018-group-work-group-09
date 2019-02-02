@@ -20,7 +20,7 @@ Faculty: Michele Mauri, Tommaso Elli
 
 ---
 <br>
-<span style="font-size:28pt;font-weight:bold"> ABOUT THE PROJECT </span>
+<span font-size="28pt"> ABOUT THE PROJECT </span>
 
 **Our project is about the discover of Dark Matter.** <br>
 What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments.
@@ -29,7 +29,7 @@ What’s Dark Matter? We don’t know, we only have been exposed to **theories**
 Back in the XV Century doc. **Kepler** figured out that the farther a planet is from the sun slower it orbits. This was valid also for galaxies. It became one of his very important **"three laws of planetary motion"**. Moreover he was able to calculate the gravity of a celestial bodies and finally get their mass.
 
 <p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:350px"></p>
-<p align="center" style="padding:0px">
+<p align="center">
     <em style="font-size:10pt">image_caption</em>
 </p>
 
