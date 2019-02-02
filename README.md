@@ -73,17 +73,17 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
     <img src="images/StaticDarkMatter_3.jpg" width="36.5%">
     <img src="images/StaticDarkMatter_2.jpg" width="30%">
 </p>
-<p align="center" style="padding:0px">
+<p align="center">
     <em style="font-size:10pt">Different visualizations on how the scientists represent the dark matter</em>
 </p>
 
 Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative. 
 
-<div align="center" height="500px">
+<div align="center" height="50px">
     <img src="images/PerlinNoise.gif" width="50%" float="left">
 </div>
 <p align="center">
-    <em style="font-size:10pt">Explemple of the fluid effect we wanted to reproduce</em>
+    <em style="font-size:10pt">Exemple of the fluid effect we wanted to reproduce</em>
 </p>
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
