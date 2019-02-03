@@ -90,7 +90,7 @@ var isCompletedAnimationDarkMatter = false;
 
 
 function setup() {
-    
+
     //CAMERA CAPTURE
     capture = createCapture({
         audio: false,
@@ -159,15 +159,18 @@ function draw() {
     if (mouseIsPressed) {
         newPlanetPrev.display();
     }
-    //PLANETS VELOCITY AVERAGE
+    //PLANETS VELOCITY AVERAGE and MASS
     var somma = 0;
     var average = 0;
     var mappedAverage;
+    var mass =[];
+    var masMass= 0;
     for (var i = 0; i < planets.length; i++) {
         somma = somma += planets[i].velocity;
         //console.log(i + 'corrisponde' + planets[i].velocity);
+        mass.push(planets[i].size);
+        masMass += Math.trunc(mass[i]);
     }
-    //console.log(somma);
     average = somma / planets.length;
     var biggerAverage = average * 1000;
     mappedAverage = Math.trunc(map(biggerAverage, 0, 17, 0, 50));
@@ -175,13 +178,11 @@ function draw() {
     //console.log('mapped'+mappedAverage);
     //type velocity average
     spanVel = select('.spanVel');
-    span2 = select('.span2');
-    span1 = select('.span1');
+    spanMass= select('.spanMass');
     spanVel.html("Planets' velocity average:" + mappedAverage + "km/s");
+    spanMass.html("Total mass of your system:"+masMass + " Kiloni");
     //SYSTEM UPLOAD
     //display Bar
-
-
     if (completedAnimation > 0) {
         newBar.display();
     }
@@ -237,15 +238,15 @@ function draw() {
     }
     if (avg < 50 && !isCompletedAnimationDarkMatter && iterator > 5) {
         iterator = 9;
-        
+
         $(".span6").remove();
         $(".span7").remove();
         $(".span8").remove();
-        
+
         $(".span9").shuffleLetters({
                 callback: nextSpan3
             });
-      
+
         isCompletedAnimationDarkMatter = true;
 
     }
