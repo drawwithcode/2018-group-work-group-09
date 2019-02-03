@@ -91,9 +91,6 @@ var isCompletedAnimationDarkMatter = false;
 
 function setup() {
     
-    function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
     //CAMERA CAPTURE
     capture = createCapture({
         audio: false,
