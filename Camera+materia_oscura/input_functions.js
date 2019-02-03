@@ -23,12 +23,12 @@ function timeIt() {
   //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
   intervalAnimation = setInterval(uploadGalaxy, 30);
-  if (pd === 1) {
+  if (pd === 1 && keyCode == ENTER) {
     newBar = new UploadBar();
   }
 }
 function uploadGalaxy() {
-  if ( keyIsPressed == true && completedAnimation <= holdingTime && keyCode == ENTER) {
+  if ( keyIsPressed == true && completedAnimation <= holdingTime && keyCode == ENTER && textEnd == 8) {
     completedAnimation++;
     barLenght++;
     for (var i = 0; i < planets.length; i++) {

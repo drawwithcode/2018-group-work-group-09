@@ -54,6 +54,7 @@ var timeline = new mojs.Timeline({
 })
  .add(burst);
 //Text VARIABLES
+var spanMass;
 var spanVel;//velocity average
 var span1;
 var span2;
@@ -141,9 +142,13 @@ function draw() {
   var somma = 0;
   var average= 0;
   var mappedAverage;
+  var mass =[];
+  var masMass= 0;
   for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
     //console.log(i + 'corrisponde' + planets[i].velocity);
+    mass.push(planets[i].size);
+    masMass += Math.trunc(mass[i]);
   }
   //console.log(somma);
   average = somma / planets.length;
@@ -153,12 +158,14 @@ function draw() {
   //console.log('mapped'+mappedAverage);
   //type velocity average
   spanVel = select('.spanVel');
+  spanMass= select('.spanMass');
   span2= select('.span2');
   span1= select('.span1');
   spanVel.html("Planets' velocity average:"+mappedAverage + "km/s");
+  spanMass.html("Total mass of your system:"+masMass + " Kiloni");
   //SYSTEM UPLOAD
   //display Bar
-  if (completedAnimation > 0) {
+  if (completedAnimation > 0 && textEnd ==8) {
     newBar.display();
   }
   if (completedAnimation > 80) {
@@ -210,7 +217,6 @@ function draw() {
   $(".span8").remove();
 });
   }
-  console.log(textEnd);
 }
 
 function windowResized() {
