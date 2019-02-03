@@ -54,7 +54,7 @@ var timeline = new mojs.Timeline({
 })
  .add(burst);
 //Text VARIABLES
-var span4;//velocity average
+var spanVel;//velocity average
 var span1;
 var span2;
 var span3;
@@ -136,7 +136,8 @@ function draw() {
    //display PREVIEW
   if ( mouseIsPressed) {
     newPlanetPrev.display();
-
+  // span1= select('.span1');
+  // span1.remove();
   }
   //PLANETS VELOCITY AVERAGE
   var somma = 0;
@@ -148,12 +149,16 @@ function draw() {
   }
   //console.log(somma);
   average = somma / planets.length;
-  mappedAverage = map(average, 0.01,0.1, 0, 100);
+  var biggerAverage= average*1000;
+  mappedAverage = Math.trunc( map(biggerAverage, 0,17, 0, 50));
+  //console.log('average'+biggerAverage);
+  //console.log('mapped'+mappedAverage);
   //type velocity average
-  span4 = select('.span4');
+  spanVel = select('.spanVel');
   span2= select('.span2');
-  //console.log(span4);
-  span4.html("Planets' velocity average:"+mappedAverage + "km/h");
+  span1= select('.span1');
+  //console.log(spanVel);
+  spanVel.html("Planets' velocity average:"+mappedAverage + "km/s");
   //SYSTEM UPLOAD
   //display Bar
   if (completedAnimation > 0) {
@@ -162,8 +167,13 @@ function draw() {
   if (completedAnimation > 80) {
     newBar.noBar();
     span2.html('Nuovo testo blablabla');
-    span4.style('color','RED');
-    materia_oscura_setup()
+    spanVel.html("Planets' velocity average:ERROR");
+    spanVel.style('color','RED');
+    materia_oscura_setup();
+    $(document).ready(function(){
+    $(".span1").remove();
+  });
+
 
   }
   //display PLANETS

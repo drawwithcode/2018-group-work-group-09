@@ -90,7 +90,7 @@ var options
           if(iterator!=2){
           options.callback(el);
           }
-          
+
           el.data('animated', false);
           return;
         }
@@ -142,3 +142,5 @@ var options
 (jQuery);
 
 $(".span1").shuffleLetters();
+$(".spanVel").shuffleLetters();
+$(".spanMass").shuffleLetters();

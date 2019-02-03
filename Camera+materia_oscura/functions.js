@@ -19,6 +19,7 @@ function PlanetPrev(_x, _y, _size) {
    this.x =  width / 2 - this.sizeWidthTwo/2;
    this.y =  height / 2 + canvasDimension + 20;
    this.opacity= 0;
+   var rect1;
    this.display = function(_width) {
      //static rect
       push();
@@ -38,12 +39,12 @@ function PlanetPrev(_x, _y, _size) {
   this.sizeWidth = 0;
   this.sizeWidthTwo = 0;
   this.sizeHeight = 0;
-   push();
-   fill(255);
-   textAlign( CENTER);
-   textSize(30);
-   text('System Uploaded',  width/2 ,  height / 2 + canvasDimension);
-   pop();
+   // push();
+   // fill(255);
+   // textAlign( CENTER);
+   // textSize(30);
+   // text('System Uploaded',  width/2 ,  height / 2 + canvasDimension);
+   // pop();
      }
    }
  }
