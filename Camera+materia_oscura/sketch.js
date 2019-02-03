@@ -136,8 +136,6 @@ function draw() {
    //display PREVIEW
   if ( mouseIsPressed) {
     newPlanetPrev.display();
-  // span1= select('.span1');
-  // span1.remove();
   }
   //PLANETS VELOCITY AVERAGE
   var somma = 0;
@@ -157,7 +155,6 @@ function draw() {
   spanVel = select('.spanVel');
   span2= select('.span2');
   span1= select('.span1');
-  //console.log(spanVel);
   spanVel.html("Planets' velocity average:"+mappedAverage + "km/s");
   //SYSTEM UPLOAD
   //display Bar
@@ -171,12 +168,14 @@ function draw() {
     spanVel.style('color','RED');
     materia_oscura_setup();
     $(document).ready(function(){
-      $(".span1").remove();
+    $(".span1").remove();
     $(".span3").remove();
     $(".span4").remove();
     $(".span5").remove();
   });
-
+  if(textEnd==8){
+    $(".span6").shuffleLetters();
+}
 
   }
   //display PLANETS
@@ -190,13 +189,26 @@ function draw() {
 
    pop();
 }
-//TEXT FLOW fist step
+//TEXT FLOW
   if(textEnd==6){
   $(".span4").shuffleLetters();
   }
-  console.log(textEnd);
   if(textEnd==7){
   $(".span5").shuffleLetters();
+  }
+  if(textEnd==9){
+  $(".span7").shuffleLetters();
+  }
+  if(textEnd==10){
+  $(".span8").shuffleLetters();
+  }
+  if (avg < 70 && textEnd==11) {
+  $(".spanDark").shuffleLetters();
+  $(document).ready(function(){
+  $(".span6").remove();
+  $(".span7").remove();
+  $(".span8").remove();
+});
   }
   console.log(textEnd);
 }
