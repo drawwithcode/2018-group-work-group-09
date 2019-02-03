@@ -166,12 +166,15 @@ function draw() {
   }
   if (completedAnimation > 80) {
     newBar.noBar();
-    span2.html('Nuovo testo blablabla');
+    // span2.html('Nuovo testo blablabla');
     spanVel.html("Planets' velocity average:ERROR");
     spanVel.style('color','RED');
     materia_oscura_setup();
     $(document).ready(function(){
-    $(".span1").remove();
+      $(".span1").remove();
+    $(".span3").remove();
+    $(".span4").remove();
+    $(".span5").remove();
   });
 
 
@@ -187,6 +190,15 @@ function draw() {
 
    pop();
 }
+//TEXT FLOW fist step
+  if(textEnd==6){
+  $(".span4").shuffleLetters();
+  }
+  console.log(textEnd);
+  if(textEnd==7){
+  $(".span5").shuffleLetters();
+  }
+  console.log(textEnd);
 }
 
 function windowResized() {

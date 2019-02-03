@@ -58,9 +58,13 @@ function PlanetPrev(_x, _y, _size) {
    this.incremento = 0;
  //first planet paragraph
    if (clicckato != 0 && clicckato <=1) {
+     $(document).ready(function(){
+     $(".span2").remove();
+   });
      $(".span3").shuffleLetters();
-   }
+     console.log(textEnd);
 
+   }
    this.setIncremento = function(incremento) {
      this.incremento = incremento / 10;
      this.velocity += this.incremento;

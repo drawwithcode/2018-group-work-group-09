@@ -1,6 +1,6 @@
-var iterator = 1;
-var newIterator = 0;
+var iterator;
 var options
+var textEnd = 1;
 
 (function($) {
 
@@ -14,7 +14,9 @@ var options
       "callback": function() {
         //era iterator ++
         iterator=2;
-          $(".span" + (iterator+newIterator)).shuffleLetters();
+textEnd ++;
+console.log(textEnd);
+          $(".span" + iterator).shuffleLetters();
       }
 
 
@@ -32,6 +34,7 @@ var options
 
       if (el.data('animated')) {
         return true;
+
       }
 
       el.data('animated', true);
@@ -87,12 +90,13 @@ var options
           // The animation is complete. Updating the
           // flag and triggering the callback;
           //ho modificato questo.
-          if(iterator!=2){
+
           options.callback(el);
-          }
+
 
           el.data('animated', false);
           return;
+
         }
 
         // All the work gets done here
