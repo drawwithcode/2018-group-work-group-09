@@ -4,14 +4,6 @@ A project about something you can't see but exists. Gioco di parole
 
 <img src="images/Sfondo%20stellato.png"/>
 
-###### INDEX
-[team members](/######TEAM-MEMBERS)<br>
-[course references and academic year]()<br>
-[about the project]()<br>
-[design challenges]()<br>
-[code chanllenges](######code-challenges)<br>
-[inspiration and references]()<br>
-
 ---
 ###### TEAM MEMBERS
 
