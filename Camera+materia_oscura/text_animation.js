@@ -1,4 +1,4 @@
-var iterator;
+var iterator = 1;
 var options
 var textEnd = 1;
 
@@ -13,10 +13,7 @@ var textEnd = 1;
       "text": "", // Use this text instead of the contents
       "callback": function() {
         //era iterator ++
-        iterator=2;
-textEnd ++;
-console.log(textEnd);
-          $(".span" + iterator).shuffleLetters();
+//          $(".span" + iterator).shuffleLetters();
       }
 
 
@@ -145,6 +142,98 @@ console.log(textEnd);
 })
 (jQuery);
 
-$(".span1").shuffleLetters();
+$(".span1").shuffleLetters({
+   "callback": nextSpan
+});
+
+function nextSpan(){   
+        iterator++;    
+//        textEnd++;
+
+    
+    if (iterator < 6){
+    
+     var $parentDiv = $('#sketch2'),
+        $innerListItem =  $(".span" + iterator);
+        
+        console.log("finito", iterator);
+        $innerListItem.shuffleLetters({
+            "callback": nextSpan
+        });  
+        
+    }
+    
+      setInterval(function(){
+          if (iterator < 6){
+                $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
+          }
+        }, 1000);
+    
+
+    
+}
+
+
+function nextSpan2(){ 
+    
+    console.log("iteratore", iterator);
+        iterator++;  
+    
+//        textEnd++;
+   var $parentDiv = $('#sketch2'),
+        $innerListItem =  $(".span" + iterator);
+        
+    
+    if (iterator > 5 && iterator < 9){
+    
+  
+        console.log("finito", iterator);
+        $innerListItem.shuffleLetters({
+            "callback": nextSpan2
+        });  
+        
+    }
+    
+      setInterval(function(){
+          if (iterator > 5 && iterator < 9){
+                $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
+          }
+        }, 1000);
+    
+
+    
+}
+
+function nextSpan3(){ 
+    
+    console.log("iteratore", iterator);
+        iterator++;  
+    
+//        textEnd++;
+   var $parentDiv = $('#sketch2'),
+        $innerListItem =  $(".span" + iterator);
+        
+    
+    if (iterator > 8 && iterator < 11){
+    
+  
+        console.log("finito", iterator);
+        $innerListItem.shuffleLetters({
+            "callback": nextSpan3
+        });  
+        
+    }
+    
+      setInterval(function(){
+          if (iterator > 8 && iterator < 11){
+                $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
+          }
+        }, 1000);
+    
+
+    
+}
+    
+    
 $(".spanVel").shuffleLetters();
 $(".spanMass").shuffleLetters();

@@ -59,10 +59,10 @@ function PlanetPrev(_x, _y, _size) {
  //first planet paragraph
    if (clicckato != 0 && clicckato <=1) {
      $(document).ready(function(){
-     $(".span2").remove();
+//     $(".span2").remove();
    });
-     $(".span3").shuffleLetters();
-     console.log(textEnd);
+//     $(".span3").shuffleLetters();
+//     console.log(textEnd);
 
    }
    this.setIncremento = function(incremento) {

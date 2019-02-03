@@ -1,5 +1,5 @@
 function materia_oscura_setup() {
-  console.log('siii collega');
+//  console.log('siii collega');
  cols = floor(width / scl + scl);
  rows = floor(height / scl + scl);
  flowfield = new Array(cols * rows);
