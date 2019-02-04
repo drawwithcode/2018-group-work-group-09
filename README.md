@@ -131,8 +131,9 @@ P: We started to imagine how to recreate the effect of dark matter starting by t
     <em style="font-size:10pt">The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
 </p>
 
-S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
-We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
+This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
+
+S: We ran a search on <a href="https://codepen.io/" style="color:black;">CodePen</a> to find other Perlin Noise uses 
 
 
 #### Text flipping animation

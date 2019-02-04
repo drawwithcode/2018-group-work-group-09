@@ -1,29 +1,20 @@
 function materia_oscura_setup() {
-//  console.log('siii collega');
- cols = floor(width / scl + scl);
- rows = floor(height / scl + scl);
- flowfield = new Array(cols * rows);
- for (var x = 0; x < cols; x++) {
-   flowfield[x] = new Array(cols);
-   for (var y = 0; y < rows; y++) {
-     flowfield[x][y] = [0, 0];
-   }
- }
+  cols = floor(width /scl  + scl);
+  rows = floor(height/scl + scl);
 }
+
 function materia_oscura_draw() {
   background(0);
-  //console.log('si collega');
-  for (var y = 0; y < rows; y++) {
-    for (var x = 0; x < cols; x++) {
+  for (var y = 0; y < rows; y+=2) {
+    for (var x = 0; x < cols; x+=2) {
       var angle = module.simplex3(x / 50, y / 50, zoff) * PI * 2;
       var length = module.simplex3(x / 50 + 40000, y / 50 + 40000, zoff);
-      flowfield[x][y][0] = angle;
-      flowfield[x][y][1] = length;
       push();
       stroke(255);
+
       translate(x * scl, y * scl) //così me ne fa uno ogni 20;
       rotate(angle);
-      strokeWeight(0.8);
+      strokeWeight(2);
       line(scl * length, scl * length, scl * length, scl * length);
       pop();
 
