@@ -50,7 +50,7 @@ With this project we would like to make the user live the challenge born from th
 
 Initially, we though it could be interesting to show how things should work in space according to Kepler's discoveries: this would help the user to familiarize with physics concepts about celestial bodies and the rules that control the universe.
 
-#### Website experience <span style="font-size:28pt">💅🏼</span>
+#### Website experience
 
 In order to do so we divided the experience in three different steps:
 
@@ -153,7 +153,7 @@ We began to modify the sketch by translating it in p5.js. After that, we designe
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
 
-S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
+S: We created an ```ìterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
 ```js
@@ -166,4 +166,9 @@ function easy
 ---
 ###### INSPIRATION AND REFERENCES
 
--
+All the references and links are already quoted in the text. However, we used the support of many other websites to search for inspiration and suggestion for code problems. Among these there are:
+
+- [CodePen.io](https://codepen.io/)
+- [Mr. Shiffman's tutorials](https://shiffman.net/)
+- [OpenProcessing.org](https://www.openprocessing.org/)
+- [StackOverflow](https://stackoverflow.com/)
