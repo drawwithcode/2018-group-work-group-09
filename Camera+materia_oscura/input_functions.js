@@ -13,7 +13,7 @@ function timeIt() {
   }
   pressSize =  map(mousePressedDuration, 0, 28, 5, 70);
   // console.log(pressSize);
-  if (distance <= canvasDimension && uploaded === false) {
+  if (distance <= canvasDimension && distance >= 50 && uploaded === false) {
     newPlanetPrev.size = pressSize;
   }
 }
@@ -73,7 +73,7 @@ function uploadGalaxy() {
   //console.log(reald);
   //adding a new planet
   //stop producing planets after the upload
-  if (uploaded === false && distance < canvasDimension) {
+  if (uploaded === false && distance < canvasDimension && distance >= 50 ) {
     //animation
     //burst.play();
     circ.play();
