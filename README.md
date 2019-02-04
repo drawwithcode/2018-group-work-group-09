@@ -92,9 +92,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 
 #### Project's design features
 
-- The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase speed starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar has as visual feedback a loading bar that appears when it is pressed. In addition, the speed increase is also displayed in the console, to highlight with the text the change.
-
-- Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
+1. A very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
 
 <div align="center">
     <img src="images/PlanetsPreview.gif" width="40%" >
@@ -102,6 +100,8 @@ In contrast with this, all the other elements in the canvas are regular and defi
 <p align="center">
     <em>Preview of the dimension of the planet the user is about to drop</em>
 </p>
+
+2. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase  starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar is another visual feedback value, especially when a loading bar appears. In addition, the speed increase is also displayed in the console, highlighting with the text the change.
 
 3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
 
@@ -112,7 +112,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
     <em>Letter flipping animation</em>
 </p>
 
-4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
+4. The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter. In has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what he can see.
 
 <div align="center">
     <img src="images/CoverWebcam.gif" width="40%">

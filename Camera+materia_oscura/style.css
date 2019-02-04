@@ -1,10 +1,15 @@
-html, body{
-  margin: 0; padding: 0; border: 0; height: 100%; width: 100%;
-  overflow: hidden;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 /* #sketchWrapper{
@@ -13,57 +18,79 @@ html, body{
     align-content: flex-start;
     justify-content: space-between;
 } */
-#sketch2{
-  width: 25%;
-  float: right;
-  height: 80vh;
-  padding: 25px;
-  overflow: auto;
-  background: darkgrey;
-  margin: 0;
-}
-#counter{
-  /* z-index: 2; */
-  width: 25%;
-  float: right;
-  position: relative;
-  left: 25%;
-  top: 80vh;
-  height: 20vh;
-  padding: 25px;
-  overflow: none;
-  background: white;
-  margin: 0;
-}
-span{
-  text-align: left;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: normal;
-  margin: 0;
-  /* text-transform: uppercase; */
-  font-family: 'Inconsolata', sans-serif;
-  letter-spacing: 2px;
-  display: none;
-  opacity: 0;
-  margin-bottom: 25px;
+#sketch2 {
+    width: 25%;
+    float: right;
+    height: 100vh;
+    padding: 25px;
+    overflow: hidden;
+    background: black;
+    margin: 0;
+    border-left-style: solid;
+    border-left-width: 0.5px;
+    border-left-color: white;
+
 }
 
+#counter {
+    /* z-index: 2; */
+    width: 25%;
+    float: right;
+    position: relative;
+    left: 25%;
+    top: 89vh;
+    padding: 20px 0px 0px 20px;
+    height: 15vh;
+    overflow: none;
+    background: black;
+    margin: 0;
+    border-left-style: solid;
+    border-left-width: 0.5px;
+    border-left-color: white;
+    border-top-style: solid;
+    border-top-width: 0.5px;
+    border-top-color: white;
+
+}
+
+span {
+    text-align: left;
+    font-size: 18px;
+    line-height: 26px;
+    /*    font-weight: lighter;*/
+    margin: 0;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 3px;
+    display: none;
+    opacity: 0;
+    margin-bottom: 25px;
+}
+
+/*
 .span2 {
 text-transform: uppercase;
 }
+*/
 
-.spanVel{
-  /* position: absolute; */
-  /* display : fixed; */
-  margin-bottom: 25px;
-}
-.spanMass{
-  display : fixed;
-  margin-bottom: 25px;
+.spanVel {
+    /* position: absolute; */
+    /* display : fixed; */
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-span.is-visible{
-  opacity: 1;
+.spanMass {
+    /*  display : fixed;*/
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+span.is-visible {
+    opacity: 1;
     display: block;
 }

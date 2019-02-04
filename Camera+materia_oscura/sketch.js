@@ -204,8 +204,8 @@ function draw() {
     //type velocity average
     spanVel = select('.spanVel');
     spanMass= select('.spanMass');
-    spanVel.html("Planets' velocity average:" + mappedAverage + "km/s");
-    spanMass.html("Total mass of your system:"+masMass + " Kiloni");
+    spanVel.html("Average velocity: " + mappedAverage + " km/s");
+    spanMass.html("Total mass: " +masMass + " kg x 10^12");
     //SYSTEM UPLOAD
     //display Bar
     if (completedAnimation > 0) {
@@ -216,7 +216,7 @@ function draw() {
     if (completedAnimation > 80) {
         newBar.noBar();
         // span2.html('Nuovo testo blablabla');
-        spanVel.html("Planets' velocity average:ERROR");
+        spanVel.html("Average velocity:ERROR");
         spanVel.style('color', 'RED');
         materia_oscura_setup();
 
