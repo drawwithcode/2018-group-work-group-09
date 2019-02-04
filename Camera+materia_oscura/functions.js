@@ -15,16 +15,16 @@ function PlanetPrev(_x, _y, _size) {
  function UploadBar() {
    this.sizeWidth = 400;
    this.sizeWidthTwo = 400;
-   this.sizeHeight = 50 ;
+   this.sizeHeight = 20;
    this.x =  width / 2 - this.sizeWidthTwo/2;
-   this.y =  height / 2 + canvasDimension + 20;
+   this.y =  height / 2 + canvasDimension ;
    this.opacity= 0;
    var rect1;
    this.display = function(_width) {
      //static rect
       push();
       stroke(255);
-      strokeWeight(3);
+      strokeWeight(2);
       noFill();
       rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight,50);
       pop();
