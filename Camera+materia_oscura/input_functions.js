@@ -19,11 +19,13 @@ function timeIt() {
 }
 //VELOCITY INCREMENT and UPLOAD BAR
  function keyPressed(e) {
-  justOne++;
+  //justOne++;
   //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
-  intervalAnimation = setInterval(uploadGalaxy, 30);
-  if (justOne === 1 && keyCode == ENTER) {
+
+  if (keyCode == ENTER) {
+    console.log('fin qua ok');
+    intervalAnimation = setInterval(uploadGalaxy, 30);
     newBar = new UploadBar();
   }
 }
