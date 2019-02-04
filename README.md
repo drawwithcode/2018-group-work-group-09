@@ -62,7 +62,7 @@ You can create your system of planets and satellites just by ```onClick()``` cli
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
 
 **Step #3**<br>
-Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. This revelation is led also by the text that shows you the speed increment.  
+Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. This revelation is led also by the text that shows you the speed and mass increment.
 
 #### Visual design
 
