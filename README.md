@@ -82,7 +82,7 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
 Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
-    <img src="images/PerlinNoise.gif" width="300px" float="left">
+    <img src="images/PerlinNoise.gif" width="300px">
 </div>
 <p align="center">
     <em style="font-size:10pt">Exemple of the fluid effect we wanted to reproduce</em>
@@ -90,19 +90,31 @@ Looking at different images the scientist use to represent dark matter we immedi
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
 
-#### Innovative ideas // forse metterei una cosa tipo "caratteristiche del progetto"
+#### Project's design features
 
-1. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase speed starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar has as visual feedback a loading bar that appears when it is pressed. In addition, the speed increase is also displayed in the console, to highlight with the text the change.
-2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what
-3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
-4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
+ 1. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase speed starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar has as visual feedback a loading bar that appears when it is pressed. In addition, the speed increase is also displayed in the console, to highlight with the text the change.
+ 2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
 
 <div align="center">
-    <img src="ReadMeImages/CoverWebcam.gif" width="60%">
+    <img src="images/PlanetsPreview.gif" width="40%" >
 </div>
 <p align="center">
-    <em style="font-size:10pt">image_caption</em>
+    <em style="font-size:10pt">Preview of the dimension of the planet the user is about to drop</em>
 </p>
+
+<div align="center">
+    <img src="images/CoverWebcam.gif" width="40%" style="float: left; margin: 20px">
+</div>
+    
+3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
+
+
+
+
+
+
+4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
+
 
 
 ---
