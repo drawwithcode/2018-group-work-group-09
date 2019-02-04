@@ -19,7 +19,7 @@ var barLenght = 10;
 // holding time 80, interval 30, inc 0,01
 var uploaded = false;
 var uploadFinish = 0;
-var justOne = 0;
+var pd = 0;
 //Mojs variables
 var burst = new mojs.Burst({
     left: 0,
@@ -224,7 +224,19 @@ function draw() {
         pop();
     }
     //TEXT FLOW
-    if (avg < 50 && !isCompletedAnimationDarkMatter && iterator >= 8) {
+    if (textEnd == 6) {
+        $(".span4").shuffleLetters();
+    }
+    if (textEnd == 7) {
+        $(".span5").shuffleLetters();
+    }
+    if (textEnd == 9) {
+        $(".span7").shuffleLetters();
+    }
+    if (textEnd == 10) {
+        $(".span8").shuffleLetters();
+    }
+    if (avg < 50 && !isCompletedAnimationDarkMatter && iterator > 5) {
         iterator = 9;
 
         $(".span6").remove();
@@ -234,6 +246,7 @@ function draw() {
         $(".span9").shuffleLetters({
                 callback: nextSpan3
             });
+
         isCompletedAnimationDarkMatter = true;
 
     }
