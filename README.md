@@ -20,7 +20,7 @@ Faculty: Michele Mauri, Tommaso Elli
 ###### ABOUT THE PROJECT
 
 **Our project is about the discover of Dark Matter.** <br>
-What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments.
+What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments. Qua aggiungerei: l'unico motivo per cui si conosce è per gli effetti che ha su alcuni elementi dell'universo.
 
 **But how the scientists discovered the presence of Dark Matter?**<br>
 Back in the XV Century doc. **Kepler** figured out that the farther a planet is from the sun slower it orbits. This was valid also for galaxies. It became one of his very important **"three laws of planetary motion"**. Moreover he was able to calculate the gravity of a celestial bodies and finally get their mass.
@@ -36,7 +36,7 @@ Many years after scientist **Vera Rubin** observed that in many galaxies, the fa
 Scientists nowadays define “dark matter” a hypothetical component of matter that, unlike known matter, would not emit electromagnetic radiation and would currently be detectable only indirectly through its gravitational effects. The dark matter should constitute almost the 90% of the present mass in the universe. They were able also to define other theories to demostrate the presence of this anti-materia:
 
 - The theory of **galaxy rotation** (the speed of rotation should decrease with the increase in the diameter of the orbit and instead remains constant)
-- The theory of **gravitational lens** (the visible mass is insufficient to create a gravitational lens capable of deflecting light) 
+- The theory of **gravitational lens** (the visible mass is insufficient to create a gravitational lens capable of deflecting light)
 - The theory of **light deviation** (following a scientific observation it was found that the light is also diverted in areas where the masses were not visible)
 
 Understanding dark matter is **important to understand the size, shape and future of the universe.** The amount of dark matter in the universe will determine if the universe is open (continues to expand), closed (expands to a point and then collapses) or flat (expands and then stops when it reaches equilibrium).<br>
@@ -49,7 +49,7 @@ With this project we would like to make the user live the challenge born from th
 
 Initially, we though it could be interesting to show how things should work in space according to Kepler's discoveries: this would help the user to familiarize with physics concepts about celestial bodies and the rules that control the universe.
 
-#### Website experience 💅🏼
+#### Website experience <span style="font-size:28pt">💅🏼</span>
 
 In order to do so we divided the experience in three different steps:
 
@@ -62,7 +62,7 @@ You can create your system of planets and satellites just by ```onClick()``` cli
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
 
 **Step #3**<br>
-Now everything is 
+Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. This revelation is led also by the text that shows you the speed increment.  
 
 #### Visual design
 
@@ -77,9 +77,9 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
     <em style="font-size:10pt">Different visualizations on how the scientists represent the dark matter</em>
 </p>
 
-Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative. 
+Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
-<div align="center">
+<div align="center" height="50px">
     <img src="images/PerlinNoise.gif" width="50%" float="left">
 </div>
 <p align="center">
@@ -90,13 +90,10 @@ In contrast with this, all the other elements in the canvas are regular and defi
 
 #### Innovative ideas
 
-1. Planets rotation's velocity<br>
-th
-2. Console element<br>
-the
-3. Invert colours and covering the webcam<br>
-this is 
- 
+1. Planets float with a different velocity once you go to the
+2. The idea to have a console element in the
+3. Invert colours and covering the webcam
+
 ---
 ###### CODE CHANGELLES
 
@@ -113,15 +110,15 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 
 ```
 
-1. Rotation's velocity changing
-2. Perline noise/dark matter fluid animation
+1. Velocità dei pianeti cambiata
+2. Perline noise
 3. Web cam
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
 
-S: We created an ```iterator``` as a variable and created a ```for```cicle to call the animation for each span.
-We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/). 
+S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
+We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
 ```js
 function easy
