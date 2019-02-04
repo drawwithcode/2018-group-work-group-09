@@ -19,7 +19,7 @@ function timeIt() {
 }
 //VELOCITY INCREMENT and UPLOAD BAR
  function keyPressed(e) {
-  //justOne++;
+  justOne++;
   //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
 
@@ -54,12 +54,14 @@ function uploadGalaxy() {
     barLenght--;
     for (var k = 0; k < planets.length; k++) {
       planets[k].setIncremento(-0.01)
-      console.log(planets[k].incremento);
-      console.log(planets[k].velocity);
+      //console.log(planets[k].incremento);
+      //console.log(planets[k].velocity);
+      uploaded = true;
     }
   }
   //uploading bar
-  uploaded = true;
+
+  console.log(uploaded);
 }
 //CREAZIONE PLANETS
  function mouseReleased () {
@@ -67,8 +69,8 @@ function uploadGalaxy() {
   distance =  dist( mouseX,  mouseY,  width / 2,  height / 2);
   mappedDistance =  map(distance, 0, canvasDimension, 0.01, 0.08);
   var reald = 0.1 - mappedDistance;
-  console.log(distance);
-  console.log(reald);
+  //console.log(distance);
+  //console.log(reald);
   //adding a new planet
   //stop producing planets after the upload
   if (uploaded === false && distance < canvasDimension) {
