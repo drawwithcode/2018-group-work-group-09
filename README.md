@@ -1,6 +1,7 @@
 # DARK MATTER(S)
 
-A project about something you can't see but exists. Gioco di parole
+A project about something you can't see but exists. Discover the invisible.
+
 
 <img src="images/Sfondo%20stellato.png"/>
 
@@ -62,7 +63,8 @@ You can create your system of planets and satellites just by ```onClick()``` cli
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
 
 **Step #3**<br>
-Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. This revelation is led also by the text that shows you the speed and mass increment.
+Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. The concept is also explained and demostrated by the data at the bottom of the "console", which are about the average velocity and the total mass of the system.
+
 
 #### Visual design
 
@@ -91,8 +93,17 @@ In contrast with this, all the other elements in the canvas are regular and defi
 #### Innovative ideas
 
 1. Planets float with a different velocity once you go to the
-2. The idea to have a console element in the
-3. Invert colours and covering the webcam
+2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what 
+3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions.
+4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
+
+<div align="center">
+    <img src="ReadMeImages/CoverWebcam.gif" width="60%">
+</div>
+<p align="center">
+    <em style="font-size:10pt">image_caption</em>
+</p>
+
 
 ---
 ###### CODE CHANGELLES
@@ -110,9 +121,12 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 
 ```
 
-1. Velocità dei pianeti cambiata
-2. Perline noise
-3. Web cam
+#### Dark Matter animation
+P:
+
+S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
+We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
+
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
@@ -124,6 +138,8 @@ We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation
 function easy
 
 ```
+
+
 
 ---
 ###### INSPIRATION AND REFERENCES
