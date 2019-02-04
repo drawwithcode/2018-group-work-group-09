@@ -26,7 +26,7 @@ What’s Dark Matter? We don’t know, we only have been exposed to **theories**
 **But how the scientists discovered the presence of Dark Matter?**<br>
 Back in the XV Century doc. **Kepler** figured out that the farther a planet is from the sun slower it orbits. This was valid also for galaxies. It became one of his very important **"three laws of planetary motion"**. Moreover he was able to calculate the gravity of a celestial bodies and finally get their mass.
 
-<p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:350px"></p>
+<p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:300px"></p>
 <p align="center">
     <em style="font-size:10pt">image_caption</em>
 </p>
@@ -124,8 +124,6 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
-
-
 <p align="center"> <img src="images/perlinnoise02.gif"></p>
 <p align="center">
     <em style="font-size:10pt">The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
@@ -133,7 +131,23 @@ P: We started to imagine how to recreate the effect of dark matter starting by t
 
 This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
 
-S: We ran a search on <a href="https://codepen.io/" style="color:black;">CodePen</a> to find other Perlin Noise uses 
+S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
+<p align="center"> <img src="images/flowfield.gif"></p>
+<p align="center">
+    <em style="font-size:10pt">The Johan Karlsson's sketch.</em>
+</p>
+
+We began to modify the sketch by translating it in p5.js. After that, we designed it studying how to use the functions for our aim. We used the point element instead that line element. When we created the grid we realized that by positioning a point element each **x** and **y** position the skectch became too heavy, slowing down the entire animation. We faced the problem by decreasing the density of the elements.
+<p align="center"> <img src="images/darkMatter_primaModifica.gif"></p>
+<p align="center">
+    <em style="font-size:10pt">The first version of the dark matter effect</em>
+</p>
+
+<p align="center"> <img src="images/darkMatter_dopoModifica.gif"></p>
+<p align="center">
+    <em style="font-size:10pt">The final version of the dark matter effect</em>
+</p>
+
 
 
 #### Text flipping animation
