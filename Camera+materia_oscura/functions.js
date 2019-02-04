@@ -17,34 +17,29 @@ function PlanetPrev(_x, _y, _size) {
    this.sizeWidthTwo = 400;
    this.sizeHeight = 20;
    this.x =  width / 2 - this.sizeWidthTwo/2;
-   this.y =  height / 2 + canvasDimension ;
+   this.y =  windowHeight/6 * 5 ;
    this.opacity= 0;
    var rect1;
+   var rect2;
    this.display = function(_width) {
      //static rect
       push();
       stroke(255);
       strokeWeight(2);
       noFill();
-      rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight,50);
+      rect1= rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight,50);
       pop();
      //growing rect
       push();
       noStroke();
       fill(255);
-      rect(this.x , this.y , this.sizeWidth , this.sizeHeight,50);
+      rect2= rect(this.x , this.y , this.sizeWidth , this.sizeHeight,50);
       pop();
      this.noBar = function() {
         noStroke();
   this.sizeWidth = 0;
   this.sizeWidthTwo = 0;
   this.sizeHeight = 0;
-   // push();
-   // fill(255);
-   // textAlign( CENTER);
-   // textSize(30);
-   // text('System Uploaded',  width/2 ,  height / 2 + canvasDimension);
-   // pop();
      }
    }
  }
