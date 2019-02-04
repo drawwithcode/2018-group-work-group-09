@@ -20,14 +20,7 @@ function materia_oscura_draw() {
       flowfield[x][y][0] = angle;
       flowfield[x][y][1] = length;
       push();
-      r = 255;
-      g = 255;
-      b = 255;
-      // r = random(81,255);
-      // g = 106;
-      // b = 207;
-      stroke(r, g, b);
-      //stroke(lerpColor(color('#ea0043'), color('#0fefca'), frameCount/120));
+      stroke(255);
       translate(x * scl, y * scl) //così me ne fa uno ogni 20;
       rotate(angle);
       strokeWeight(0.8);
