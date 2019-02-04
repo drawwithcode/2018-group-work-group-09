@@ -75,9 +75,10 @@ var capture;
 var w = 10;
 var h = 10;
 //Materia oscura
-var scl = 20;
+var scl = 40;
 var cols, rows;
 var flowfield;
+var r, g, b;
 var zoff = 0;
 
 module = noise;
@@ -101,7 +102,7 @@ function setup() {
         console.log('capture ready.')
     });
 
-    // frameRate(100);
+//    frameRate(15);
     capture.elt.setAttribute('playsinline', '');
     capture.size(w, h);
     //createCanvas(windowWidth, windowHeight);
@@ -121,6 +122,7 @@ function setup() {
 function draw() {
     //console.log(frameCount);
     //CAMERA CAPTURE
+    // image(capture, 0, 0, w, h);
     capture.loadPixels();;
     if (capture.pixels.length > 0) {
         var total = 0;
@@ -134,9 +136,11 @@ function draw() {
         }
         var n = w * h;
         var avg = int(total / n);
+        //console.log(avg)
         select('#average-color').elt.style.backgroundColor = 'rgb(' + avg + ',' + avg + ',' + avg + ')';
     }
-    //Covering camera
+
+
     if (avg < 50) {
         materia_oscura_draw();
     } else {
@@ -178,7 +182,6 @@ function draw() {
     spanVel.html("Planets' velocity average:" + mappedAverage + "km/s");
     spanMass.html("Total mass of your system:"+masMass + " Kiloni");
     //SYSTEM UPLOAD
-
     //display Bar
     if (completedAnimation > 0) {
         newBar.display();
@@ -217,6 +220,7 @@ function draw() {
             planets[j].display();
             //console.log(planets)
         };
+
         pop();
     }
     //TEXT FLOW
