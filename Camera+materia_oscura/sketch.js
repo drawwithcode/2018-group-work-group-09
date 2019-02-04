@@ -65,6 +65,7 @@ var timeline = new mojs.Timeline({
         repeat: 999,
     })
     .add(burst);
+    var coords;
 //Text VARIABLES
 var spanVel; //velocity average
 var span1;
@@ -84,10 +85,19 @@ var zoff = 0;
 module = noise;
 //altre variabili--
 var avg;
+var xbr;
+var ybr;
 
 var isCompletedAnimation = false;
 var isCompletedAnimationDarkMatter = false;
 
+function windowResized() {
+    resizeCanvas((windowWidth / 4 * 3), windowHeight);
+     xbr = width / 2;
+   ybr = height / 2;
+    burst.tune({x : xbr});
+    burst.tune({y : ybr});
+}
 
 function setup() {
 
@@ -112,14 +122,21 @@ function setup() {
     capture.hide();
 
     //by planets_generator.js
-    var coords = {
-        x: width / 2,
-        y: height / 2
-    };
-    burst.tune(coords);
+    // coords = {
+    //     x: width / 2,
+    //     y: height / 2
+    // };
+    // burst.tune(coords);
+    xbr = (window.innerWidth/4 * 3) / 2;
+    ybr = window.innerHeight / 2;
+    burst.tune({x : xbr});
+    burst.tune({y : ybr});
 }
 
+
+
 function draw() {
+
     //console.log(frameCount);
     //CAMERA CAPTURE
     // image(capture, 0, 0, w, h);
@@ -147,6 +164,13 @@ function draw() {
         background(0);
     }
     //SUN
+    // coords = {
+    //     x: width / 2,
+    //     y: height / 2
+    // };
+
+    console.log(xbr , ybr);
+    console.log('x sun = ' + width/2 + 'y sun = '+ height/2);
     burst.play();
     push();
     stroke(255);
@@ -154,6 +178,7 @@ function draw() {
     fill(0);
     ellipse(width / 2, height / 2, 40);
     pop();
+
 
     //display PREVIEW
     if (mouseIsPressed) {
@@ -239,8 +264,4 @@ function draw() {
     }
     //  console.log(textEnd);
 
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
 }
