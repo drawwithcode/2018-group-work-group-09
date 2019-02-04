@@ -122,13 +122,13 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 ```
 
 #### Dark Matter animation
-P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of the channel **The Coding Train**
+P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
 
 
-<p align="center"> <img src="images/perlinnoise02.gif" style="height:200px"></p>
+<p align="center"> <img src="images/perlinnoise02.gif"></p>
 <p align="center">
-    <em style="font-size:10pt">image_caption</em>
+    <em style="font-size:10pt">The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
 </p>
 
 S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
