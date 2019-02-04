@@ -28,7 +28,7 @@ function timeIt() {
   }
 }
 function uploadGalaxy() {
-    if ( keyIsPressed == true && completedAnimation <= holdingTime && keyCode == ENTER && iterator >=5) {
+  if ( keyIsPressed == true && completedAnimation <= holdingTime && keyCode == ENTER && iterator >=5) {
     completedAnimation++;
     barLenght++;
     for (var i = 0; i < planets.length; i++) {
