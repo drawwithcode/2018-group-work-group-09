@@ -45,6 +45,7 @@ function uploadGalaxy() {
     clearInterval(intervalAnimation);
     //chiamo funzione per cancellare tutto
     newBar.noBar();
+    uploaded = true;
   }
   if (completedAnimation <= holdingTime) {
     newBar.sizeWidth = barLenght * 4.4;
@@ -56,7 +57,7 @@ function uploadGalaxy() {
       planets[k].setIncremento(-0.01)
       //console.log(planets[k].incremento);
       //console.log(planets[k].velocity);
-      uploaded = true;
+
     }
   }
   //uploading bar
