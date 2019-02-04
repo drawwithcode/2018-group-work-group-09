@@ -184,6 +184,6 @@ function easy
 All the references and links are already quoted in the text. However, we used the support of many other websites to search for inspiration and suggestion for code problems. Among these there are:
 
 - [CodePen.io](https://codepen.io/)
-- [Mr. Shiffman's tutorials](https://shiffman.net/)
+- [Mr. Shiffman's tutorials (the one and only)](https://shiffman.net/)
 - [OpenProcessing.org](https://www.openprocessing.org/)
 - [StackOverflow](https://stackoverflow.com/)
