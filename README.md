@@ -1,6 +1,7 @@
 # DARK MATTER(S)
 
-A project about something you can't see but exists. Gioco di parole
+A project about something you can't see but exists. Discover the invisible.
+
 
 <img src="images/Sfondo%20stellato.png"/>
 
@@ -92,7 +93,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 
 1. Planets float with a different velocity once you go to the
 2. The idea to have a console element in the
-3. Invert colours and covering the webcam
+3. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
 
 ---
 ###### CODE CHANGELLES
@@ -110,9 +111,12 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 
 ```
 
-1. Velocità dei pianeti cambiata
-2. Perline noise
-3. Web cam
+#### Dark Matter animation
+P:
+
+S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
+We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
+
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
@@ -124,6 +128,8 @@ We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation
 function easy
 
 ```
+
+
 
 ---
 ###### INSPIRATION AND REFERENCES
