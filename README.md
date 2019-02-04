@@ -93,7 +93,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 #### Innovative ideas
 
 1. Planets float with a different velocity once you go to the
-2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what 
+2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what
 3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions.
 4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
 
@@ -122,7 +122,14 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 ```
 
 #### Dark Matter animation
-P:
+P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of the channel **The Coding Train**
+
+
+
+<p align="center"> <img src="images/perlinnoise02.gif" style="height:200px"></p>
+<p align="center">
+    <em style="font-size:10pt">image_caption</em>
+</p>
 
 S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
