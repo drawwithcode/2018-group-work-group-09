@@ -75,7 +75,7 @@ var capture;
 var w = 10;
 var h = 10;
 //Materia oscura
-var scl = 20;
+var scl = 40;
 var cols, rows;
 var flowfield;
 var r, g, b;
