@@ -179,7 +179,8 @@ function mouseReleased () {
 }  
 
 ```
-S:The variable "reald" increments the rotation of the ellipse in the instance newPlanet.  Reference per fare velocità fatta così   
+
+S:The variable "reald" increments the rotation of the ellipse in the instance newPlanet. We take the inspiration for how produce different velocities from this <a href = "https://github.com/pablotrinidad/solar-system-visualization" style="color: black;">sketch</a> but in our project the planets' speed is set by the user in real time.
 
 ```js
 function Planet(_x, _y, _size, _velocity) {
@@ -200,6 +201,29 @@ function Planet(_x, _y, _size, _velocity) {
 }
 ```
 
+#### Loading Bar synchronized with planets' speed.
+P: In ours plans after the upload the speeds of planets increment. We liked the idea of a smooth transition to better underline this velocity change. So we tried to coordinate the growth of the loading bar with the increase of the speed and to make them both decrease when the spacebar is no longer pushed.  
+
+S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function set increase the variable "completedAnimation"
+
+```js
+var intervalAnimation;
+var completedAnimation = 0;
+var holdingTime = 80;
+var barLenght = 10;
+
+function uploadGalaxy() {
+
+  if (keyIsPressed == true && completedAnimation <= holdingTime &&
+    decrease == false && keyCode == 32 && iterator >= 5) {
+    increase == true;
+    completedAnimation++;
+    for (var i = 0; i < planets.length; i++) {
+      planets[i].setIncremento(0.01);
+    }
+  }
+
+```
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
