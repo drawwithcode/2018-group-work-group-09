@@ -36,11 +36,24 @@ var burst = new mojs.Burst({
     radius: {
       6: 0
     },
+<<<<<<< HEAD
     fill: 'white',
     shape: 'zigzag',
     duration: 2000,
     // x : 300,
   }
+=======
+    count: 10,
+    children: {
+        radius: {
+          3 : 0
+        },
+        fill: 'white',
+        shape: 'zigzag',
+        duration: 2000,
+        // x : 300,
+    }
+>>>>>>> f2a2b154baaa54cfa1044ce706df0ad90984d048
 })
 var circle_options = {
   left: 0,
@@ -143,6 +156,7 @@ function setup() {
 }
 
 function draw() {
+    background(0);
 
   //console.log(frameCount);
   //CAMERA CAPTURE
@@ -165,6 +179,7 @@ function draw() {
   }
 
 
+<<<<<<< HEAD
   if (avg < 50) {
     materia_oscura_draw();
   } else {
@@ -175,6 +190,22 @@ function draw() {
   //     x: width / 2,
   //     y: height / 2
   // };
+=======
+
+    //SUN
+    // coords = {
+    //     x: width / 2,
+    //     y: height / 2
+    // };
+
+    burst.play();
+    push();
+    stroke(255);
+    strokeWeight(1);
+    fill(0);
+    ellipse(width / 2, height / 2, 40);
+    pop();
+>>>>>>> f2a2b154baaa54cfa1044ce706df0ad90984d048
 
   burst.play();
   push();
@@ -226,7 +257,15 @@ function draw() {
     spanVel.style('animation', "blink 700ms infinite alternate");
         // spanVel.blink();
 
+<<<<<<< HEAD
     materia_oscura_setup();
+=======
+        materia_oscura_setup();
+        if (avg < 50) {
+            materia_oscura_draw();
+        }
+
+>>>>>>> f2a2b154baaa54cfa1044ce706df0ad90984d048
 
 
     $(".span1").remove();

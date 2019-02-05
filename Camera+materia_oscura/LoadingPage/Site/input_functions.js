@@ -33,7 +33,11 @@ var decrease = false;
 var increase = false;
 function uploadGalaxy() {
 
+<<<<<<< HEAD
     if (decrease == false && keyIsPressed == true && completedAnimation <= holdingTime && keyCode == 32 && iterator >=5  ) {
+=======
+    if (decrease == false && keyIsPressed == true && completedAnimation <= holdingTime && keyCode == 32 && iterator >=5) { 
+>>>>>>> f2a2b154baaa54cfa1044ce706df0ad90984d048
       increase == true;
     //console.log('cresce =' + increase);
     completedAnimation++;
