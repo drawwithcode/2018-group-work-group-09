@@ -82,7 +82,7 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
 Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
-    <img src="images/PerlinNoise.gif" width="300px">
+    <img src="images/PerlinNoise.gif" style="width:300px">
 </div>
 <p align="center">
     <em>Exemple of the fluid effect we wanted to reproduce</em>
@@ -95,7 +95,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 1. A very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
 
 <div align="center">
-    <img src="images/PlanetsPreview.gif" width="40%" >
+    <img src="images/PlanetsPreview.gif" style="width:300px">
 </div>
 <p align="center">
     <em>Preview of the dimension of the planet the user is about to drop</em>
@@ -106,7 +106,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
 
 <div align="center">
-    <img src="images/TextAnimation.gif"images/PlanetsPreview.gif"" width="40%" >
+    <img src="images/TextAnimation.gif"images/PlanetsPreview.gif"" style="width:300px">
 </div>
 <p align="center">
     <em>Letter flipping animation</em>
@@ -115,7 +115,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 4. The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter. In has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what he can see.
 
 <div align="center">
-    <img src="images/CoverWebcam.gif" width="40%">
+    <img src="images/CoverWebcam.gif" style="width:300px">
 </div>
 
 
@@ -240,15 +240,41 @@ S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a 
     <em >The Johan Karlsson's sketch.</em>
 </p>
 
-We began to modify the sketch by translating it in p5.js. After that, we designed it studying how to use the functions for our aim. We used the point element instead that line element. When we created the grid we realized that by positioning a point element each **x** and **y** position the skectch became too heavy, slowing down the entire animation. We faced the problem by decreasing the density of the elements.
+We began to modify the sketch by translating it in p5.js. After that, we designed it studying how to use the functions for our aim. We used the **point element** instead that line element because we wanted to give the idea of **Dark Matter particles**.
+```js
+//A piece of the materia_oscura_draw() function.
+  // This is a global variable --> var scl = 20;
+  var angle = module.simplex3(x / 50, y / 50, zoff) * PI * 2;
+      var length = module.simplex3(x / 50 + 40000, y / 50 + 40000, zoff);
+      push();
+      stroke(255);
+      translate(x * scl, y * scl) //così me ne fa uno ogni 20;
+      rotate(angle);
+      strokeWeight(2);
+      point(scl * length, scl * length);
+      pop();
+      zoff += 0.000009;
+    }
+  }
+}
+```
+In the code it is visible the **module.simplex3** piece, which is the link with the library mentioned before.
+
+When we created the grid we realized that the sketch became too heavy by positioning a point element each x and y position , slowing down the entire animation. We faced the problem by decreasing the density of the elements.
+```js
+//A piece of the materia_oscura_draw() function.
+for (var y = 0; y < rows; y+=3) {
+  for (var x = 0; x < cols; x+=3) {
+    //the ```
+  }
+}
+```
 <p align="center"> <img src="images/darkMatter_primaModifica.gif"></p>
-<p align="center">
-    <em >The first version of the dark matter effect</em>
-</p>
+
 
 <p align="center"> <img src="images/darkMatter_dopoModifica.gif"></p>
 <p align="center">
-    <em >The final version of the dark matter effect</em>
+    <em >The two tests of dark matter density</em>
 </p>
 
 
