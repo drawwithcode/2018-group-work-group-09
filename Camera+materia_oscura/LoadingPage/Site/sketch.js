@@ -38,7 +38,6 @@ var burst = new mojs.Burst({
     fill: 'white',
     shape: 'zigzag',
     duration: 2000,
-    // x : 300,
   }
 })
 var circle_options = {
@@ -103,6 +102,7 @@ function windowResized() {
   });
 }
 
+
 function setup() {
 
   //CAMERA CAPTURE
@@ -115,8 +115,6 @@ function setup() {
   }, function() {
     console.log('capture ready.')
   });
-
-  //    frameRate(15);
   capture.elt.setAttribute('playsinline', '');
   capture.size(w, h);
   //createCanvas(windowWidth, windowHeight);
@@ -124,13 +122,7 @@ function setup() {
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
   capture.hide();
-
-  //by planets_generator.js
-  // coords = {
-  //     x: width / 2,
-  //     y: height / 2
-  // };
-  // burst.tune(coords);
+  //burst animation
   xbr = (window.innerWidth / 4 * 3) / 2;
   ybr = window.innerHeight / 2;
   burst.tune({
@@ -146,9 +138,7 @@ function setup() {
 function draw() {
   background(0);
 
-  //console.log(frameCount);
   //CAMERA CAPTURE
-  // image(capture, 0, 0, w, h);
   capture.loadPixels();;
   if (capture.pixels.length > 0) {
     var total = 0;
@@ -169,11 +159,6 @@ function draw() {
 
 
   //SUN
-  // coords = {
-  //     x: width / 2,
-  //     y: height / 2
-  // };
-
   burst.play();
   push();
   stroke(255);
@@ -187,32 +172,28 @@ function draw() {
   if (mouseIsPressed) {
     newPlanetPrev.display();
   }
+
+
   //PLANETS VELOCITY AVERAGE and MASS
   var somma = 0;
   var average = 0;
   var mappedAverage = '';
-
-
   var mass = [];
   var masMass = 0;
   for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
-    //console.log(i + 'corrisponde' + planets[i].velocity);
     mass.push(planets[i].size);
     masMass += Math.trunc(mass[i]);
   }
   average = somma / planets.length;
   var biggerAverage = average * 1000;
-
-  // var mappedAverage = Math.trunc(0);
-
   var mappedAverage = Math.trunc(map(biggerAverage, 0, 17, 0, 50));
-  //console.log('average'+biggerAverage);
-  //console.log('mapped'+mappedAverage);
-  //type velocity average
   spanVel = select('.spanVel');
   spanMass = select('.spanMass');
-  spanVel.html("Average velocity: " + mappedAverage + " km/s");
+  if(mappedAverage==NaN){
+  spanVel.html("Speed average: 0 km/s");
+}else{spanVel.html("Speed average: " + mappedAverage + " km/s");}
+
   spanMass.html("Total mass: " + masMass + " kg x 10<sup>12</sup> ");
   //SYSTEM UPLOAD
   //display Bar
@@ -271,15 +252,15 @@ function draw() {
   //TEXT FLOW
     if (avg < 50 && !isCompletedAnimationDarkMatter && iterator > 5) {
         iterator = 9;
-        
+
         $(".span6").remove();
         $(".span7").remove();
         $(".span8").remove();
-        
+
         $(".span9").shuffleLetters({
                 callback: nextSpan3
             });
-      
+
         isCompletedAnimationDarkMatter = true;
 
     }
