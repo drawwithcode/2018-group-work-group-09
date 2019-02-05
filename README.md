@@ -293,7 +293,11 @@ for (var y = 0; y < rows; y+=3) {
 Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
 <br></br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <p align="center"> <img src="images/lawngreem.19.04.png" width="20%"></p>
+=======
+<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
+>>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
 =======
 <p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
 >>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
