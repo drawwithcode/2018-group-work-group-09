@@ -74,7 +74,7 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
 We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text and a dark background.
 <p align="center"><img src="images/terminale-visualisation.png" width="60%"></p>
 
- Since dark matter is something we cannot see and so it has no form, and probably permeate all the universe.
+Dark matter is an invisible and so undefined form that probably permeates all the Universe.
 
 <div align="center">
     <img src="images/StaticDarkMatter_1.jpg" width="30%">
@@ -82,16 +82,16 @@ We wanted to recreate the terminal aesthetics, so we used the LawnGreen color fo
     <img src="images/StaticDarkMatter_2.jpg" width="30%">
 </div>
 <p align="center">
-    <em >Different visualizations on how the scientists represent the dark matter</em>
+    <em >Different visualizations of how scientists represent the dark matter</em>
 </p>
 
-Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
+Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effect was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
     <img src="images/PerlinNoise.gif" style="width:60%">
 </div>
 <p align="center">
-    <em>Exemple of the fluid effect we wanted to reproduce</em>
+    <em>Example of the fluid effect we wanted to reproduce</em>
 </p>
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
