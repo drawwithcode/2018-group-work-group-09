@@ -169,8 +169,6 @@ function draw() {
     //     y: height / 2
     // };
 
-    console.log(xbr , ybr);
-    console.log('x sun = ' + width/2 + 'y sun = '+ height/2);
     burst.play();
     push();
     stroke(255);
