@@ -71,7 +71,7 @@ Now everything is moving faster, but why? The instructions say to cover the came
 
 For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketches, in order to make the user notice even the smallest changes.
 
-We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text.
+We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text and a dark background.
 <p align="center"><img src="images/terminale-visualisation.png" width="60%"></p>
 
  Since dark matter is something we cannot see and so it has no form, and probably permeate all the universe.
