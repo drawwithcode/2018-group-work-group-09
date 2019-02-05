@@ -216,6 +216,13 @@ function draw() {
         // span2.html('Nuovo testo blablabla');
         spanVel.html("Average velocity:ERROR");
         spanVel.style('color', 'RED');
+
+  //       fill('RED');
+  // fill(255 + sin(frameCount * 0.1) * 128); //velocità e intensità blinking
+  // textSize(40);
+  // // fill("red");
+  // text("ERROR", 10, 50);
+
         materia_oscura_setup();
 
 
