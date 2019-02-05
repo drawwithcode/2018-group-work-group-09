@@ -12,6 +12,7 @@ function timeIt() {
     clearInterval(interval);
   }
   pressSize =  map(mousePressedDuration, 0, 28, 5, 70);
+  // console.log(pressSize);
   if (distance <= canvasDimension && distance >= 50 && uploaded === false) {
     newPlanetPrev.size = pressSize;
   }
@@ -19,34 +20,36 @@ function timeIt() {
 //VELOCITY INCREMENT and UPLOAD BAR
  function keyPressed(e) {
   justOne++;
+  //uploadTried++;
   //ci mette quasi 3 secondi (30 ms * 80 volte)
 
   if (keyCode == 32) {
-    intervalAnimation = setInterval(uploadGalaxy, 100);
+    console.log('fin qua ok');
+    intervalAnimation = setInterval(uploadGalaxy, 30);
     newBar = new UploadBar();
   }
 }
+var decrease = false;
+var increase = false;
 function uploadGalaxy() {
-  var decrease = false;
-  var increase = false;
-    if ( decrease == false && keyIsPressed == true && completedAnimation <= holdingTime && keyCode == 32 && iterator >=5) {
+
+  if (decrease == false && keyIsPressed == true && completedAnimation <= holdingTime && keyCode == 32 && iterator >= 5) {
+    increase == true;
+    //console.log('cresce =' + increase);
     completedAnimation++;
     barLenght++;
-    increase == true;
-    console.log('cresce =' + decrease);
     for (var i = 0; i < planets.length; i++) {
       planets[i].setIncremento(0.01)
-      //console.log(planets[i].incremento);
-      //console.log(planets[i].velocity);
+      // console.log(planets[i].incremento);
+      // console.log(planets[i].velocity);
     }
   }
-
+  console.log(completedAnimation);
   if (completedAnimation >= holdingTime + 1) {
     clearInterval(intervalAnimation);
     //chiamo funzione per cancellare tutto
     newBar.noBar();
     uploaded = true;
-    console.log('in fine' + completedAnimation);
   }
   if (completedAnimation <= holdingTime) {
     newBar.sizeWidth = barLenght * 4.4;
@@ -55,7 +58,8 @@ function uploadGalaxy() {
     completedAnimation--;
     barLenght--;
     decrease = true;
-    console.log('decresce =' + decrease);
+    increase = true;
+    //console.log('decresce =' + decrease);
     for (var k = 0; k < planets.length; k++) {
       planets[k].setIncremento(-0.01)
       //console.log(planets[k].incremento);
@@ -64,17 +68,19 @@ function uploadGalaxy() {
     }
   }
   console.log(increase);
-  console.log(decrease);
-  if (keyIsPressed == false && completedAnimation ==0){
-    clearInterval(intervalAnimation);
-  }
-  if (increase == true && decrease == true ){
-    console.log('letto'+ decrease);
-    clearInterval(intervalAnimation);
-    decrease = false;
-    increase = false;
-  }
+ console.log(decrease);
+ if (keyIsPressed == false && completedAnimation ==0){
+   clearInterval(intervalAnimation);
+ }
+ if (keyIsPressed == true && increase == true && decrease == true ){
+   console.log('letto'+ decrease);
+   clearInterval(intervalAnimation);
+   decrease = false;
+   increase = false;
+ }
+  //uploading bar
 
+  //console.log(uploaded);
 }
 //CREAZIONE PLANETS
  function mouseReleased () {
