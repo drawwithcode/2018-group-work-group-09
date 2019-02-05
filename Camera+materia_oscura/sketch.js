@@ -18,7 +18,6 @@ var holdingTime = 80;
 var barLenght = 10;
 // holding time 80, interval 30, inc 0,01
 var uploaded = false;
-var uploadFinish = 0;
 var justOne = 0;
 //Mojs variables
 var burst = new mojs.Burst({
@@ -164,13 +163,6 @@ function draw() {
         background(0);
     }
     //SUN
-    // coords = {
-    //     x: width / 2,
-    //     y: height / 2
-    // };
-
-    console.log(xbr , ybr);
-    console.log('x sun = ' + width/2 + 'y sun = '+ height/2);
     burst.play();
     push();
     stroke(255);
