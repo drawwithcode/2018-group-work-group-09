@@ -143,6 +143,8 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 #### Planet's previews size
 P: During the first step of the experience we decided to give the possibility to user to create planets of different sizes according to the pressure time of the input.  
 
+<p align="center"> <img src="images/planetPrev.gif" style="height:300px"></p>
+
 S: We decided to set an interval of 50 milliseconds of pressure to execute a function that increments the variable called mousePressedDuration. This was a good time interval to obtain a fluid animation of the growing planet. We mapped this variable and we use it to set the size property in the newPlanetPrev instance.
 
 ```js
@@ -208,6 +210,8 @@ function Planet(_x, _y, _size, _velocity) {
 
 #### Loading Bar synchronized with planets' speed.
 P: In ours plans after the upload the speeds of planets increment. We liked the idea of a smooth transition to better underline this velocity change. So we tried to coordinate the growth of the loading bar with the increase of the speed and to make them both decrease when the spacebar is no longer pushed.  
+
+<p align="center"> <img src="images/barSpeed.gif" style="height:300px"></p>
 
 S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function increases the variable "completedAnimation" that will be used to understand at which point of the upload is the animation. Everytime that this function is executed the method ".setIncremento" modify a property that increments the speed in all the newPlanets instances stored in "planets".
 To reverse the animation we subtract the same increment to the variables.  
@@ -288,7 +292,7 @@ for (var y = 0; y < rows; y+=3) {
 </p>
 Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
 <br></br>
-<p align="center"> <img src="images/lawngreem.19.04.png" width="60%"></p>
+<p align="center"> <img src="images/lawngreem.19.04.png" width="20%"></p>
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
