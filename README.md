@@ -288,7 +288,7 @@ for (var y = 0; y < rows; y+=3) {
 </p>
 Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
 <br></br>
-<p align="center"> <img src="images/lawngreem.19.04.png" width="60%"></p>
+<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
