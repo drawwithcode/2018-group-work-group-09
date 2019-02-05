@@ -265,7 +265,7 @@ function draw() {
   }
   //TEXT FLOW
   if (avg < 50 && !isCompletedAnimationDarkMatter && iterator >= 8) {
-    iterator = 9;
+    iterator = 8;
 
     $(".span6").remove();
     $(".span7").remove();
