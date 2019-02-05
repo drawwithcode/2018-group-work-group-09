@@ -190,10 +190,9 @@ function draw() {
   var mappedAverage = Math.trunc(map(biggerAverage, 0, 17, 0, 50));
   spanVel = select('.spanVel');
   spanMass = select('.spanMass');
-  if(mappedAverage==NaN){
   spanVel.html("Speed average: 0 km/s");
-}else{spanVel.html("Speed average: " + mappedAverage + " km/s");}
-
+  if(clicckato >=1){
+    spanVel.html("Speed average: " + mappedAverage + " km/s");}
   spanMass.html("Total mass: " + masMass + " kg x 10<sup>12</sup> ");
   //SYSTEM UPLOAD
   //display Bar
