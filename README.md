@@ -164,7 +164,7 @@ function timeIt() {
 #### Planet's speed and distance from the sun
 P: We wanted that the user could make experience of the third Kepler law in a simplified way. Planets more distant from the sun rotate slower than the closest one.  
 
-S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1 that is the massima velocità alla quale i pianeti si possono muovere senza che l'animazione sia troppo veloce per il framerate. Once obtained that value it would be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
+S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1 that is the maximum speed without incur in strange visual effects due to the frame count speed . Once obtained that value it would be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
 
 ```js
 function mouseReleased () {
