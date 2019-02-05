@@ -244,7 +244,7 @@ P: We started to imagine how to recreate the effect of dark matter starting by t
 
 <p align="center"> <img src="images/perlinnoise02.gif" style="width:60%"></p>
 <p align="center">
-    <em >The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
+    <em >The result of our first dark matter's sketch. The skecth is <a href="https://leamaraa.github.io/Perlin-noise-/">here</a></em>
 </p>
 
 This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
