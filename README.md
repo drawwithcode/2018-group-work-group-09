@@ -21,14 +21,14 @@ Faculty: Michele Mauri, Tommaso Elli
 ###### ABOUT THE PROJECT
 
 **Our project is about the discover of Dark Matter.** <br>
-What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments. Qua aggiungerei: l'unico motivo per cui si conosce è per gli effetti che ha su alcuni elementi dell'universo.
+What’s Dark Matter? We don’t know, we only have been exposed to **theories**. But the main point of this project is to show that actually it is still something unknown. Dark matter is something that **permeate the universe**, but remains unseen and hard to define. It does not reflect the light, so we are not able to detect it with our instruments. The only reasons why scientists believe dark matter exists is because of its effects on the other matter in the universe.
 
 **But how the scientists discovered the presence of Dark Matter?**<br>
 Back in the XV Century doc. **Kepler** figured out that the farther a planet is from the sun slower it orbits. This was valid also for galaxies. It became one of his very important **"three laws of planetary motion"**. Moreover he was able to calculate the gravity of a celestial bodies and finally get their mass.
 
-<p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:350px"></p>
+<p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:300px"></p>
 <p align="center">
-    <em style="font-size:10pt">image_caption</em>
+    <em >image_caption</em>
 </p>
 
 
@@ -50,7 +50,7 @@ With this project we would like to make the user live the challenge born from th
 
 Initially, we though it could be interesting to show how things should work in space according to Kepler's discoveries: this would help the user to familiarize with physics concepts about celestial bodies and the rules that control the universe.
 
-#### Website experience <span style="font-size:28pt">💅🏼</span>
+#### Website experience
 
 In order to do so we divided the experience in three different steps:
 
@@ -76,42 +76,57 @@ For the visuals we wanted to keep everything as clear and simple as possible. Bl
     <img src="images/StaticDarkMatter_2.jpg" width="30%">
 </div>
 <p align="center">
-    <em style="font-size:10pt">Different visualizations on how the scientists represent the dark matter</em>
+    <em >Different visualizations on how the scientists represent the dark matter</em>
 </p>
 
 Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
-    <img src="images/PerlinNoise.gif" width="50%" float="left">
+    <img src="images/PerlinNoise.gif" width="300px">
 </div>
 <p align="center">
-    <em style="font-size:10pt">Exemple of the fluid effect we wanted to reproduce</em>
+    <em>Exemple of the fluid effect we wanted to reproduce</em>
 </p>
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
 
-#### Innovative ideas
+#### Project's design features
 
-1. Planets float with a different velocity once you go to the
-2. Another very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what
-3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions.
-4. Invert colours and covering the webcam: The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter.
+1. A very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
 
 <div align="center">
-    <img src="ReadMeImages/CoverWebcam.gif" width="60%">
+    <img src="images/PlanetsPreview.gif" width="40%" >
 </div>
 <p align="center">
-    <em style="font-size:10pt">image_caption</em>
+    <em>Preview of the dimension of the planet the user is about to drop</em>
 </p>
+
+2. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase  starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar is another visual feedback value, especially when a loading bar appears. In addition, the speed increase is also displayed in the console, highlighting with the text the change.
+
+3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
+
+<div align="center">
+    <img src="images/TextAnimation.gif"images/PlanetsPreview.gif"" width="40%" >
+</div>
+<p align="center">
+    <em>Letter flipping animation</em>
+</p>
+
+4. The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter. In has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what he can see.
+
+<div align="center">
+    <img src="images/CoverWebcam.gif" width="40%">
+</div>
+
 
 
 ---
 ###### CODE CHANGELLES
 
 #### Basic canvasses structure
-P: One of first problems we had was trying to figure out how to build the basic structure of the website. This is because we had many
+P: One of first problems we had was trying to figure out how to build the basic structure of the website. This is because we had many solutions, but we also wanted to keep it as simple as possible to be able to modify the style whenever we needed on another stylesheet.
 
-S: We decided to use the *html* language and *css* attributes to create a new template for the canvas and the text in order to link the .js animation we needed for the "console effect". Every paragraph now is insered into a ```<span>``` tag.
+S: We decided to use the *html* language and *css* attributes to create a new template for the canvas and the text in order to link the .js animation we needed for the "console effect". Every paragraph is insered into a ```<span>``` tag so we could also keep separated paragraphs.
 
 ```html
 <!--
@@ -124,22 +139,36 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
-
-
 <p align="center"> <img src="images/perlinnoise02.gif"></p>
 <p align="center">
-    <em style="font-size:10pt">The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
+    <em >The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
 </p>
 
 This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
 
-S: We ran a search on <a href="https://codepen.io/" style="color:black;">CodePen</a> to find other Perlin Noise uses 
+S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
+<p align="center"> <img src="images/flowfield.gif"></p>
+<p align="center">
+    <em >The Johan Karlsson's sketch.</em>
+</p>
+
+We began to modify the sketch by translating it in p5.js. After that, we designed it studying how to use the functions for our aim. We used the point element instead that line element. When we created the grid we realized that by positioning a point element each **x** and **y** position the skectch became too heavy, slowing down the entire animation. We faced the problem by decreasing the density of the elements.
+<p align="center"> <img src="images/darkMatter_primaModifica.gif"></p>
+<p align="center">
+    <em >The first version of the dark matter effect</em>
+</p>
+
+<p align="center"> <img src="images/darkMatter_dopoModifica.gif"></p>
+<p align="center">
+    <em >The final version of the dark matter effect</em>
+</p>
+
 
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
 
-S: We created an ```ìnterator``` as a variable and created a ```for```cicle to call the animation for each span.
+S: We created an ```ìterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
 ```js
@@ -152,4 +181,9 @@ function easy
 ---
 ###### INSPIRATION AND REFERENCES
 
--
+All the references and links are already quoted in the text. However, we used the support of many other websites to search for inspiration and suggestion for code problems. Among these there are:
+
+- [CodePen.io](https://codepen.io/)
+- [Mr. Shiffman's tutorials (the one and only)](https://shiffman.net/)
+- [OpenProcessing.org](https://www.openprocessing.org/)
+- [StackOverflow](https://stackoverflow.com/)
