@@ -6,7 +6,6 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Firefox */
@@ -108,9 +107,6 @@ span.is-visible {
     to { opacity:0; }
 };
 
-a:visited {
-    text-decoration-color: lawngreen;
-}
 
 .button {
     background-color: black;

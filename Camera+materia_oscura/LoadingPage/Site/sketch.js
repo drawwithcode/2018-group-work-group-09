@@ -269,19 +269,20 @@ function draw() {
     pop();
   }
   //TEXT FLOW
-  if (avg < 50 && !isCompletedAnimationDarkMatter && iterator >= 8) {
-    iterator = 8;
+    if (avg < 50 && !isCompletedAnimationDarkMatter && iterator > 5) {
+        iterator = 9;
+        
+        $(".span6").remove();
+        $(".span7").remove();
+        $(".span8").remove();
+        
+        $(".span9").shuffleLetters({
+                callback: nextSpan3
+            });
+      
+        isCompletedAnimationDarkMatter = true;
 
-    $(".span6").remove();
-    $(".span7").remove();
-    $(".span8").remove();
-
-    $(".span9").shuffleLetters({
-      callback: nextSpan3
-    });
-    isCompletedAnimationDarkMatter = true;
-
-  }
+    }
   //  console.log(textEnd);
 
 }
