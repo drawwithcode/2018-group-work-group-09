@@ -68,7 +68,12 @@ Now everything is moving faster, but why? The instructions say to cover the came
 
 #### Visual design
 
-For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes. Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
+For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes.
+
+We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text.
+<p align="center"><img src="images/terminale-visualisation.png" width="80%"></p>
+
+ Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
 
 <div align="center">
     <img src="images/StaticDarkMatter_1.jpg" width="30%">
@@ -281,8 +286,9 @@ for (var y = 0; y < rows; y+=3) {
 <p align="center">
     <em >The two tests of dark matter density</em>
 </p>
-
-
+Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
+<br></br>
+<p align="center"> <img src="images/lawngreem.19.04.png" width="60%"></p>
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
