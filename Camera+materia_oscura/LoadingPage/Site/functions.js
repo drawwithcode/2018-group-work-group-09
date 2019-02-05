@@ -36,7 +36,7 @@ function PlanetPrev(_x, _y, _size) {
       rect2= rect(this.x , this.y , this.sizeWidth , this.sizeHeight,50);
       pop();
      this.noBar = function() {
-        noStroke();
+      stroke(0);
   this.sizeWidth = 0;
   this.sizeWidthTwo = 0;
   this.sizeHeight = 0;
@@ -74,3 +74,15 @@ function PlanetPrev(_x, _y, _size) {
    }
 
  }
+
+ //function blinking
+
+//  function blink(selector){
+// $(selector).fadeOut('slow', function(){
+//     $(this).fadeIn('slow', function(){
+//         blink(this);
+//     });
+// });
+// }
+//
+// blink('.blink');
