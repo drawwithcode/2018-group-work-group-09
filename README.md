@@ -135,6 +135,70 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 <span style="">This is a paragraph</span>
 
 ```
+#### Planet's previews size
+P: During the first step of the experience we decided to give the possibility to user to create planets of different sizes according to the pressure time of the input.  
+
+S: We decided to set an interval of 50 milliseconds of pressure to execute a function that increments the variable called mousePressedDuration. This was a good time interval to obtain a fluid animation of the growing planet. We mapped this variable and we use it to set the size property in the newPlanetPrev instance.
+
+```js
+function mousePressed() {
+  interval = setInterval(timeIt, 50);
+  newPlanetPrev = new PlanetPrev( mouseX,  mouseY, pressSize);
+}
+//mouse pressed duration
+function timeIt() {
+  mousePressedDuration++;
+  distance =  dist( mouseX,  mouseY,  width / 2,  height / 2);
+  if (mousePressedDuration == 28) {
+    clearInterval(interval);
+  }
+  pressSize =  map(mousePressedDuration, 0, 28, 5, 70);
+  if (distance <= canvasDimension &&
+    distance >= 50 && uploaded === false) {
+    newPlanetPrev.size = pressSize;
+  }
+}
+
+```
+
+#### Planet's speed
+P: We wanted that the user could make experience of the third Kepler law in a simplified way. Planets more distant from the sun rotate slower than the closest one.  
+
+S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1 that is the massima velocità alla quale i pianeti si possono muovere senza che l'animazione sia troppo veloce per il framerate. Once obtained that value it would be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
+
+```js
+function mouseReleased () {
+  //distances that will be used to set the velocity of the planet
+  distance =  dist( mouseX,  mouseY,  width / 2,  height / 2);
+  mappedDistance =  map(distance, 0, canvasDimension, 0.01, 0.08);
+  var reald = 0.1 - mappedDistance;
+  if (uploaded === false && distance < canvasDimension && distance >= 50 ) {
+    newPlanet = new Planet( mouseX,  mouseY, pressSize, reald);
+    planets.push(newPlanet);  
+  }
+}  
+
+```
+S:The variable "reald" increments the rotation of the ellipse in the instance newPlanet.  Reference per fare velocità fatta così   
+
+```js
+function Planet(_x, _y, _size, _velocity) {
+  this.x = _x;
+  this.y = _y;
+  this.size = _size;
+  this.velocity = _velocity;
+  this.angle = 0;
+  }
+  this.display = function() {
+    this.angle += this.velocity;
+     push()
+     rotate(this.angle);
+     translate(this.x -  width / 2, this.y -  height / 2);
+     ellipse(0, 0, this.size);
+     pop()
+  }
+}
+```
 
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
