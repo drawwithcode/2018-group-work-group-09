@@ -6,7 +6,6 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Firefox */
@@ -108,6 +107,35 @@ span.is-visible {
     to { opacity:0; }
 };
 
-a:visited {
-    text-decoration-color: lawngreen;
+
+.button {
+    background-color: black;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 35px;
+
+    border: solid 2px white;
+    border-radius: 50px;
+    /*animazione hover*/
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    */
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+}
+
+.spacer {
+    padding-bottom: 100px;
+}
+
+.spacer2 {
+    padding-top: 40px;
 }

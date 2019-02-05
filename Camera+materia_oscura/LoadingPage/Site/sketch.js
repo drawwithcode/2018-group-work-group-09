@@ -190,7 +190,9 @@ function draw() {
   //PLANETS VELOCITY AVERAGE and MASS
   var somma = 0;
   var average = 0;
-  var mappedAverage;
+  var mappedAverage = '';
+
+
   var mass = [];
   var masMass = 0;
   for (var i = 0; i < planets.length; i++) {
@@ -201,7 +203,10 @@ function draw() {
   }
   average = somma / planets.length;
   var biggerAverage = average * 1000;
-  mappedAverage = Math.trunc(map(biggerAverage, 0, 17, 0, 50));
+
+  // var mappedAverage = Math.trunc(0);
+
+  var mappedAverage = Math.trunc(map(biggerAverage, 0, 17, 0, 50));
   //console.log('average'+biggerAverage);
   //console.log('mapped'+mappedAverage);
   //type velocity average
@@ -264,19 +269,20 @@ function draw() {
     pop();
   }
   //TEXT FLOW
-  if (avg < 50 && !isCompletedAnimationDarkMatter && iterator >= 8) {
-    iterator = 8;
+    if (avg < 50 && !isCompletedAnimationDarkMatter && iterator > 5) {
+        iterator = 9;
+        
+        $(".span6").remove();
+        $(".span7").remove();
+        $(".span8").remove();
+        
+        $(".span9").shuffleLetters({
+                callback: nextSpan3
+            });
+      
+        isCompletedAnimationDarkMatter = true;
 
-    $(".span6").remove();
-    $(".span7").remove();
-    $(".span8").remove();
-
-    $(".span9").shuffleLetters({
-      callback: nextSpan3
-    });
-    isCompletedAnimationDarkMatter = true;
-
-  }
+    }
   //  console.log(textEnd);
 
 }
