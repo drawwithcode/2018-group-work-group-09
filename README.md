@@ -161,7 +161,7 @@ function timeIt() {
 
 ```
 
-#### Planet's speed
+#### Planet's speed and distance from the sun
 P: We wanted that the user could make experience of the third Kepler law in a simplified way. Planets more distant from the sun rotate slower than the closest one.  
 
 S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1 that is the massima velocità alla quale i pianeti si possono muovere senza che l'animazione sia troppo veloce per il framerate. Once obtained that value it would be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
@@ -204,10 +204,10 @@ function Planet(_x, _y, _size, _velocity) {
 #### Loading Bar synchronized with planets' speed.
 P: In ours plans after the upload the speeds of planets increment. We liked the idea of a smooth transition to better underline this velocity change. So we tried to coordinate the growth of the loading bar with the increase of the speed and to make them both decrease when the spacebar is no longer pushed.  
 
-S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function set increase the variable "completedAnimation"
+S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function increases the variable "completedAnimation" that will be used to understand at which point of the upload is the animation. Everytime that this function is executed the method ".setIncremento" modify a property that increments the speed in all the newPlanets instances stored in "planets".
+To reverse the animation we subtract the same increment to the variables.  
 
 ```js
-var intervalAnimation;
 var completedAnimation = 0;
 var holdingTime = 80;
 var barLenght = 10;
@@ -218,12 +218,17 @@ function uploadGalaxy() {
     decrease == false && keyCode == 32 && iterator >= 5) {
     increase == true;
     completedAnimation++;
+    barLenght ++;
     for (var i = 0; i < planets.length; i++) {
       planets[i].setIncremento(0.01);
     }
   }
-
+  if (completedAnimation <= holdingTime) {
+    newBar.sizeWidth = barLenght * 4.4;
+  }
+}
 ```
+
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
