@@ -33,7 +33,7 @@ var burst = new mojs.Burst({
     count: 10,
     children: {
         radius: {
-            6: 0
+          3 : 0
         },
         fill: 'white',
         shape: 'zigzag',
@@ -136,6 +136,7 @@ function setup() {
 
 
 function draw() {
+    background(0);
 
     //console.log(frameCount);
     //CAMERA CAPTURE
@@ -158,11 +159,7 @@ function draw() {
     }
 
 
-    if (avg < 50) {
-        materia_oscura_draw();
-    } else {
-        background(0);
-    }
+
     //SUN
     // coords = {
     //     x: width / 2,
@@ -172,7 +169,7 @@ function draw() {
     burst.play();
     push();
     stroke(255);
-    strokeWeight(2);
+    strokeWeight(1);
     fill(0);
     ellipse(width / 2, height / 2, 40);
     pop();
@@ -215,7 +212,8 @@ function draw() {
         newBar.noBar();
         // span2.html('Nuovo testo blablabla');
         spanVel.html("Average velocity:ERROR");
-        spanVel.style('color', 'RED');
+        spanVel.style('color', "WHITE");
+      spanVel.style('animation', "blink 700ms infinite alternate");
 
   //       fill('RED');
   // fill(255 + sin(frameCount * 0.1) * 128); //velocità e intensità blinking
@@ -224,6 +222,10 @@ function draw() {
   // text("ERROR", 10, 50);
 
         materia_oscura_setup();
+        if (avg < 50) {
+            materia_oscura_draw();
+        }
+
 
 
         $(".span1").remove();

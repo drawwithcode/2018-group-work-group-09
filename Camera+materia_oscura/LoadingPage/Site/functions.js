@@ -25,7 +25,7 @@ function PlanetPrev(_x, _y, _size) {
      //static rect
       push();
       stroke(255);
-      strokeWeight(2);
+      strokeWeight(1);
       noFill();
       rect1= rect(this.x, this.y, this.sizeWidthTwo, this.sizeHeight,50);
       pop();
