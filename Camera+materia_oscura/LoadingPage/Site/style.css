@@ -73,8 +73,6 @@ text-transform: uppercase;
 }
 */
 
-
-
 .spanVel {
     /* position: absolute; */
     /* display : fixed; */
@@ -82,8 +80,6 @@ text-transform: uppercase;
     font-size: 14px;
     color: white;
     font-family: 'IBM Plex Mono', monospace;
-    /* animation: blink 700ms infinite alternate; */
-
 }
 
 .spanMass {
@@ -98,8 +94,3 @@ span.is-visible {
     opacity: 1;
     display: block;
 }
-
-@keyframes blink {
-    from { opacity:1; }
-    to { opacity:0; }
-};
