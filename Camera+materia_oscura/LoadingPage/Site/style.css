@@ -107,3 +107,7 @@ span.is-visible {
     from { opacity:1; }
     to { opacity:0; }
 };
+
+a:visited {
+    text-decoration-color: lawngreen;
+}

@@ -214,7 +214,7 @@ function nextSpan3(){
         $innerListItem =  $(".span" + iterator);
         
     
-    if (iterator > 8 && iterator < 11){
+    if (iterator > 8 && iterator < 12){
     
   
         console.log("finito", iterator);
@@ -225,7 +225,7 @@ function nextSpan3(){
     }
     
       setInterval(function(){
-          if (iterator > 8 && iterator < 11){
+          if (iterator > 8 && iterator < 12){
                 $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
           }
         }, 1000);
