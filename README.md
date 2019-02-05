@@ -69,12 +69,12 @@ Now everything is moving faster, but why? The instructions say to cover the came
 
 #### Visual design
 
-For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes.
+For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketches, in order to make the user notice even the smallest changes.
 
 We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text.
 <p align="center"><img src="images/terminale-visualisation.png" width="60%"></p>
 
- Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
+ Since dark matter is something we cannot see and so it has no form, and probably permeate all the universe.
 
 <div align="center">
     <img src="images/StaticDarkMatter_1.jpg" width="30%">
