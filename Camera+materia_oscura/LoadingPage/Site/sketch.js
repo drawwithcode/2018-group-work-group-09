@@ -3,7 +3,7 @@ var canvasDimension = 350;
 var newPlanet;
 var planets = [];
 var planetsPrev = [];
-//contatore per triggerare funzione creapianeti
+//counter to execute create planet function
 var clicckato = 0;
 var distance;
 var mappedDistance;
@@ -11,7 +11,7 @@ var mappedDistance;
 var interval;
 var mousePressedDuration = 0;
 var pressSize = 0;
-//velocity increment animation
+//velocity increment animation for loading bar and speed
 var intervalAnimation;
 var completedAnimation = 0;
 var holdingTime = 80;
@@ -65,11 +65,10 @@ var timeline = new mojs.Timeline({
   })
   .add(burst);
 var coords;
+var xbr;
+var ybr;
 //Text VARIABLES
 var spanVel; //velocity average
-var span1;
-var span2;
-var span3;
 //Camera input
 var capture;
 var w = 10;
@@ -84,9 +83,7 @@ var zoff = 0;
 module = noise;
 //altre variabili--
 var avg;
-var xbr;
-var ybr;
-
+//text flipping animation
 var isCompletedAnimation = false;
 var isCompletedAnimationDarkMatter = false;
 
@@ -180,10 +177,12 @@ function draw() {
   var mappedAverage = '';
   var mass = [];
   var masMass = 0;
+  var mapMasMass;
   for (var i = 0; i < planets.length; i++) {
     somma = somma += planets[i].velocity;
     mass.push(planets[i].size);
     masMass += Math.trunc(mass[i]);
+    mapMasMass = map(masMass, 0, 500, 0, 100000);
   }
   average = somma / planets.length;
   var biggerAverage = average * 1000;
@@ -191,35 +190,27 @@ function draw() {
   spanVel = select('.spanVel');
   spanMass = select('.spanMass');
   spanVel.html("Speed average: 0 km/s");
+  spanMass.html("Total mass: 0 kg x 10<sup>22</sup> ");
   if(clicckato >=1){
-    spanVel.html("Speed average: " + mappedAverage + " km/s");}
-  spanMass.html("Total mass: " + masMass + " kg x 10<sup>12</sup> ");
+    spanVel.html("Speed average: " + mappedAverage + " km/s");
+  spanMass.html("Total mass: " + Math.trunc(mapMasMass) + " kg x 10<sup>22</sup> ");}
+
   //SYSTEM UPLOAD
   //display Bar
   if (completedAnimation > 0) {
     newBar.display();
   }
 
-
   if (completedAnimation > 80) {
     newBar.noBar();
-    // span2.html('Nuovo testo blablabla');
     spanVel.html("Average velocity: ERROR");
     spanVel.style('color', "WHITE");
     spanVel.style('animation', "blink 700ms infinite alternate");
-
-    //       fill('RED');
-    // fill(255 + sin(frameCount * 0.1) * 128); //velocità e intensità blinking
-    // textSize(40);
-    // // fill("red");
-    // text("ERROR", 10, 50);
 
     materia_oscura_setup();
     if (avg < 50) {
       materia_oscura_draw();
     }
-
-
 
     $(".span1").remove();
     $(".span2").remove();
@@ -230,7 +221,6 @@ function draw() {
 
     if (!isCompletedAnimation) {
       iterator = 6;
-      console.log("sto qua");
       $(".span6").shuffleLetters({
         callback: nextSpan2
       });
@@ -243,7 +233,6 @@ function draw() {
   if (clicckato != 0) {
     for (var j = 0; j < planets.length; j++) {
       planets[j].display();
-      //console.log(planets)
     };
 
     pop();
@@ -263,6 +252,5 @@ function draw() {
         isCompletedAnimationDarkMatter = true;
 
     }
-  //  console.log(textEnd);
 
 }
