@@ -136,6 +136,7 @@ function setup() {
 
 
 function draw() {
+    background(0);
 
     //console.log(frameCount);
     //CAMERA CAPTURE
@@ -158,11 +159,7 @@ function draw() {
     }
 
 
-    if (avg < 50) {
-        materia_oscura_draw();
-    } else {
-        background(0);
-    }
+
     //SUN
     // coords = {
     //     x: width / 2,
@@ -224,6 +221,10 @@ function draw() {
   // text("ERROR", 10, 50);
 
         materia_oscura_setup();
+        if (avg < 50) {
+            materia_oscura_draw();
+        }
+
 
 
         $(".span1").remove();
