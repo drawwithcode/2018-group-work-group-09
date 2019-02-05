@@ -3,7 +3,7 @@
 A project about something you can't see but exists. Discover the invisible.
 
 
-<img src="images/Sfondo%20stellato.png"/>
+<img src="images/DMsfondo.png"/>
 
 ---
 ###### TEAM MEMBERS
