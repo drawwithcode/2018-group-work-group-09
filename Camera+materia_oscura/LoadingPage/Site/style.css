@@ -94,3 +94,9 @@ span.is-visible {
     opacity: 1;
     display: block;
 }
+
+
+@keyframes blink {
+    from { opacity:1; }
+    to { opacity:0; }
+};

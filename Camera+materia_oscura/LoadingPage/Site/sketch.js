@@ -212,7 +212,8 @@ function draw() {
         newBar.noBar();
         // span2.html('Nuovo testo blablabla');
         spanVel.html("Average velocity:ERROR");
-        spanVel.style('color', 'RED');
+        spanVel.style('color', "WHITE");
+      spanVel.style('animation', "blink 700ms infinite alternate");
 
   //       fill('RED');
   // fill(255 + sin(frameCount * 0.1) * 128); //velocità e intensità blinking
