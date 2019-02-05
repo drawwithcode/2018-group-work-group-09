@@ -55,9 +55,10 @@ Initially, we though it could be interesting to show how things should work in s
 In order to do so we divided the experience in three different steps:
 
 **Step #1**<br>
-The user is taken to a tutorial section, the very beginning of this experience. In this part he can buld his own small solar system and discover how planets and satellites rotate around a big star at the center of the system. The console at the right of the screen gives you all the instructions and explanations you need. While creating your own solar system, the third Kepler's law is explained.
+The user is taken to a tutorial section, the very beginning of this experience. In this part he can build his own small solar system and discover how planets and satellites rotate around a big star at the center of the system. The console at the right of the screen gives you all the instructions and explanations you need. While creating your own solar system, the third Kepler's law is explained.
 
 You can create your system of planets and satellites just by ```onClick()``` clicking the mouse and by ```mousePressed()```keeping it pressed to create elements with different dimensions.
+
 
 **Step #2**<br>
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
@@ -71,7 +72,7 @@ Now everything is moving faster, but why? The instructions say to cover the came
 For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes.
 
 We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text.
-<p align="center"><img src="images/terminale-visualisation.png" width="80%"></p>
+<p align="center"><img src="images/terminale-visualisation.png" width="60%"></p>
 
  Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
 
@@ -87,7 +88,7 @@ We wanted to recreate the terminal aesthetics, so we used the LawnGreen color fo
 Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
-    <img src="images/PerlinNoise.gif" style="width:300px">
+    <img src="images/PerlinNoise.gif" style="width:60%">
 </div>
 <p align="center">
     <em>Exemple of the fluid effect we wanted to reproduce</em>
@@ -100,7 +101,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 1. A very important part of the project is the general feedback, both visual and interactive, to the user: for example, when he creates planets he is able to actually have a live preview of what is happening on the screen: everything is very responsive.
 
 <div align="center">
-    <img src="images/PlanetsPreview.gif" style="width:300px">
+    <img src="images/PlanetsPreview.gif" style="width:60%">
 </div>
 <p align="center">
     <em>Preview of the dimension of the planet the user is about to drop</em>
@@ -111,7 +112,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
 
 <div align="center">
-    <img src="images/TextAnimation.gif"images/PlanetsPreview.gif"" style="width:300px">
+    <img src="images/TextAnimation.gif"images/PlanetsPreview.gif"" style="width:60%">
 </div>
 <p align="center">
     <em>Letter flipping animation</em>
@@ -120,7 +121,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
 4. The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter. In has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what he can see.
 
 <div align="center">
-    <img src="images/CoverWebcam.gif" style="width:300px">
+    <img src="images/CoverWebcam.gif" style="width:60%">
 </div>
 
 
@@ -143,7 +144,7 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 #### Planet's previews size
 P: During the first step of the experience we decided to give the possibility to user to create planets of different sizes according to the pressure time of the input.  
 
-<p align="center"> <img src="images/planetPrev.gif" style="height:300px"></p>
+<p align="center"> <img src="images/planetPrev.gif" style="width:60%"></p>
 
 S: We decided to set an interval of 50 milliseconds of pressure to execute a function that increments the variable called mousePressedDuration. This was a good time interval to obtain a fluid animation of the growing planet. We mapped this variable and we use it to set the size property in the newPlanetPrev instance.
 
@@ -211,7 +212,7 @@ function Planet(_x, _y, _size, _velocity) {
 #### Loading Bar synchronized with planets' speed.
 P: In ours plans after the upload the speeds of planets increment. We liked the idea of a smooth transition to better underline this velocity change. So we tried to coordinate the growth of the loading bar with the increase of the speed and to make them both decrease when the spacebar is no longer pushed.  
 
-<p align="center"> <img src="images/barSpeed.gif" style="height:300px"></p>
+<p align="center"> <img src="images/barSpeed.gif" style="width:60%"></p>
 
 S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function increases the variable "completedAnimation" that will be used to understand at which point of the upload is the animation. Everytime that this function is executed the method ".setIncremento" modify a property that increments the speed in all the newPlanets instances stored in "planets".
 To reverse the animation we subtract the same increment to the variables.  
@@ -241,15 +242,15 @@ function uploadGalaxy() {
 #### Dark Matter animation
 P: We started to imagine how to recreate the effect of dark matter starting by the different scientific visualizations shown previously. The first idea was to working on the 3D Perlin noise following the <a href="https://www.youtube.com/watch?v=BjoM9oKOAKY&t=518s" style="color: black;">tutorial</a> of **The Coding Train** YouTube channel.
 
-<p align="center"> <img src="images/perlinnoise02.gif"></p>
+<p align="center"> <img src="images/perlinnoise02.gif" style="width:60%"></p>
 <p align="center">
-    <em >The result of our first dark matter's sketch. The skecth is <a href="Perlin noise--NON CANCELLARE/sketch.js">here</a></em>
+    <em >The result of our first dark matter's sketch. The skecth is <a href="https://leamaraa.github.io/Perlin-noise-/">here</a></em>
 </p>
 
 This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
 
-S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
-<p align="center"> <img src="images/flowfield.gif"></p>
+S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library called jbwaad.js originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
+<p align="center"> <img src="images/flowfield.gif" style="width:60%"></p>
 <p align="center">
     <em >The Johan Karlsson's sketch.</em>
 </p>
@@ -283,24 +284,17 @@ for (var y = 0; y < rows; y+=3) {
   }
 }
 ```
-<p align="center"> <img src="images/darkMatter_primaModifica.gif"></p>
+<p align="center"> <img src="images/darkMatter_primaModifica.gif" style="width:60%"></p>
 
 
-<p align="center"> <img src="images/darkMatter_dopoModifica.gif"></p>
+<p align="center"> <img src="images/darkMatter_dopoModifica.gif" style="width:60%"></p>
 <p align="center">
     <em >The two tests of dark matter density</em>
 </p>
 Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
 <br></br>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <p align="center"> <img src="images/lawngreem.19.04.png" width="20%"></p>
-=======
-<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
->>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
-=======
-<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
->>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
@@ -313,8 +307,6 @@ function easy
 
 ```
 
-
-
 ---
 ###### INSPIRATION AND REFERENCES
 
@@ -324,3 +316,18 @@ All the references and links are already quoted in the text. However, we used th
 - [Mr. Shiffman's tutorials (the one and only)](https://shiffman.net/)
 - [OpenProcessing.org](https://www.openprocessing.org/)
 - [StackOverflow](https://stackoverflow.com/)
+---
+###### USED LIBRARIES
+
+- p5.dom.min.js
+- p5.min.js
+- mo-min.js
+- jbwaad.js
+---
+###### THEORY REFERENCES
+
+We studied the dark matter phenomenon thanks to some videos that gave us the basics.
+
+- <a href="https://www.youtube.com/watch?v=pkrljGUJOPA">Vera Rubin and Dark Matter</a>
+- <a href="https://www.youtube.com/watch?v=QAa2O_8wBUQ&t=18s">What is Dark Matter and Dark Energy?</a>
+- <a href="https://www.youtube.com/watch?v=9W3RsaWuCuE&t=159s">Dark Matter: Crash Course Astronomy #41</a>
