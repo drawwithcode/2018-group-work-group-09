@@ -33,7 +33,7 @@ var burst = new mojs.Burst({
     count: 10,
     children: {
         radius: {
-            6: 0
+          3 : 0
         },
         fill: 'white',
         shape: 'zigzag',
@@ -172,7 +172,7 @@ function draw() {
     burst.play();
     push();
     stroke(255);
-    strokeWeight(2);
+    strokeWeight(1);
     fill(0);
     ellipse(width / 2, height / 2, 40);
     pop();
