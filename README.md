@@ -326,5 +326,8 @@ All the references and links are already quoted in the text. However, we used th
 ---
 ###### THEORY REFERENCES
 
-We studied the dark matter
-phenomenon
+We studied the dark matter phenomenon thanks to some videos that gave us the basics.
+
+- <a href="https://www.youtube.com/watch?v=pkrljGUJOPA">Vera Rubin and Dark Matter</a>
+- <a href="https://www.youtube.com/watch?v=QAa2O_8wBUQ&t=18s">What is Dark Matter and Dark Energy?</a>
+- <a href="https://www.youtube.com/watch?v=9W3RsaWuCuE&t=159s>Dark Matter: Crash Course Astronomy #41</a>
