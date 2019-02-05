@@ -21,9 +21,9 @@ body {
 #sketch2 {
     width: 25%;
     float: right;
-    height: 100vh;
+    height: 90vh;
     padding: 25px;
-    overflow: hidden;
+    overflow: auto;
     background: black;
     margin: 0;
     border-left-style: solid;
