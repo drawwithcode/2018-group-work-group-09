@@ -55,9 +55,10 @@ Initially, we though it could be interesting to show how things should work in s
 In order to do so we divided the experience in three different steps:
 
 **Step #1**<br>
-The user is taken to a tutorial section, the very beginning of this experience. In this part he can buld his own small solar system and discover how planets and satellites rotate around a big star at the center of the system. The console at the right of the screen gives you all the instructions and explanations you need. While creating your own solar system, the third Kepler's law is explained.
+The user is taken to a tutorial section, the very beginning of this experience. In this part he can build his own small solar system and discover how planets and satellites rotate around a big star at the center of the system. The console at the right of the screen gives you all the instructions and explanations you need. While creating your own solar system, the third Kepler's law is explained.
 
 You can create your system of planets and satellites just by ```onClick()``` clicking the mouse and by ```mousePressed()```keeping it pressed to create elements with different dimensions.
+
 
 **Step #2**<br>
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
@@ -248,7 +249,7 @@ P: We started to imagine how to recreate the effect of dark matter starting by t
 
 This kind of visualition was similar to the scientific version but it didn't follow the style of the rest of the sketch, so we decided to find a new way to display the Dark Matter.
 
-S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
+S: We ran a search on CodePen to find other 3D Perlin Noise uses. We found a <a href="https://codepen.io/DonKarlssonSan/pen/aLRLvO">skecth</a> in JavaScript and we liked the elements fluidity so we decided to use a noise library called jbwaad.js originally made by Stefan Gustavson and modified by Seph Gentle, who converted it to JavaScript, and then further modified by Johan Karlsson.
 <p align="center"> <img src="images/flowfield.gif"></p>
 <p align="center">
     <em >The Johan Karlsson's sketch.</em>
@@ -292,15 +293,8 @@ for (var y = 0; y < rows; y+=3) {
 </p>
 Finally we decided to use the green color for dark matter, to create a paradox: the visualization of dark matter is colored. The green selected is LawnGreen, with HEX code equal to # 7CFC00 and RGB equal to rgb(124,252,0).
 <br></br>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <p align="center"> <img src="images/lawngreem.19.04.png" width="20%"></p>
-=======
-<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
->>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
-=======
-<p align="center"> <img src="images/lawngreem.19.04.png" width="30%"></p>
->>>>>>> 10ec3419a623a38dd60db889b0a1d615db6e7652
 
 #### Text flipping animation
 P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
@@ -313,8 +307,6 @@ function easy
 
 ```
 
-
-
 ---
 ###### INSPIRATION AND REFERENCES
 
@@ -324,3 +316,15 @@ All the references and links are already quoted in the text. However, we used th
 - [Mr. Shiffman's tutorials (the one and only)](https://shiffman.net/)
 - [OpenProcessing.org](https://www.openprocessing.org/)
 - [StackOverflow](https://stackoverflow.com/)
+---
+###### USED LIBRARIES
+
+- p5.dom.min.js
+- p5.min.js
+- mo-min.js
+- jbwaad.js
+---
+###### THEORY REFERENCES
+
+We studied the dark matter
+phenomenon
