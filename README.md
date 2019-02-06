@@ -28,7 +28,7 @@ Back in the XV Century doc. **Kepler** figured out that the farther a planet is 
 
 <p align="center"> <img src="images/Kepler's%20third%20law.gif" style="height:300px"></p>
 <p align="center">
-    <em >image_caption</em>
+    <em >Representation of gravitational orbits</em>
 </p>
 
 
