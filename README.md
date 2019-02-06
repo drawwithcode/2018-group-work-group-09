@@ -297,12 +297,12 @@ Finally we decided to use the green color for dark matter, to create a paradox: 
 <p align="center"> <img src="images/lawngreem.19.04.png" width="20%"></p>
 
 #### Text flipping animation
-P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console.The idea was to give this kind of "creation animation", but to call the function only one paragraph at the time.
+P: We didn't know how to reproduce the flipping animation we wanted to add to the instructions on the console. The idea was to synchronize the text animation with the sketch itself by calling the function only one paragraph at a time. 
 
 S: We created an ```ìterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
-For each step we created a function to call the ```letterShuffle()``` and the autoscrolling effect for the text that overfloaded. As you can notice from the code below, in ```each nextSpan``` function (1,2,3) we declared the increasing variable to add to the class ```span``` (so it can be writtten with the animation) and the clas ``ìs-visible```.
+For each step we created a function to call the ```letterShuffle()``` and the autoscrolling effect for the text that overfloated. As you can notice from the code below, in ```each nextSpan``` function (1,2,3) we declared the increasing variable to add to the class ```span``` (so it can be writtten with the animation) and the class ``ìs-visible```.
 
 ```js
 function nextSpan(){   
