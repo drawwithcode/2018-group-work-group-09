@@ -64,7 +64,7 @@ You can create your system of planets and satellites just by ```onClick()``` cli
 The second step allows you to "upload you solar system" into the galaxy and see what actually happens in realty; you can do this by ```keyPressed()```holding the spacebar.
 
 **Step #3**<br>
-Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planes system. The concept is also explained and demostrated by the data at the bottom of the "console", which are about the average velocity and the total mass of the system.
+Now everything is moving faster, but why? The instructions say to cover the camera to see what's happening. When you cover it, the dark matter is revealed in the background of your planets system. The concept is also explained and demostrated by the data at the bottom of the "console", which are about the average velocity and the total mass of the system.
 
 
 #### Visual design
@@ -85,7 +85,7 @@ Dark matter is an invisible and so undefined form that probably permeates all th
     <em >Different visualizations of how scientists represent the dark matter</em>
 </p>
 
-Looking at different images the scientist use to represent dark matter we immediately thought that the *perlin noise* effect was the best solution to visualize this mysterious element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
+Looking at different images the scientists use to represent dark matter we immediately thought that the *perlin noise* effect was the best solution to visualize this mysterious element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
     <img src="images/PerlinNoise.gif" style="width:60%">
