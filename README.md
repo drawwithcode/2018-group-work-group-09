@@ -69,12 +69,12 @@ Now everything is moving faster, but why? The instructions say to cover the came
 
 #### Visual design
 
-For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketch, in order to make him notice even the smallest changes.
+For the visuals we wanted to keep everything as clear and simple as possible. Black and white colours, with basic shapes and very clean sketches, in order to make the user notice even the smallest changes.
 
-We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text.
+We wanted to recreate the terminal aesthetics, so we used the LawnGreen color for the text and a dark background.
 <p align="center"><img src="images/terminale-visualisation.png" width="60%"></p>
 
- Since dark matter is something we cannot see and so it as no form, and probably permeate all the universe.
+Dark matter is an invisible and so undefined form that probably permeates all the Universe.
 
 <div align="center">
     <img src="images/StaticDarkMatter_1.jpg" width="30%">
@@ -82,16 +82,16 @@ We wanted to recreate the terminal aesthetics, so we used the LawnGreen color fo
     <img src="images/StaticDarkMatter_2.jpg" width="30%">
 </div>
 <p align="center">
-    <em >Different visualizations on how the scientists represent the dark matter</em>
+    <em >Different visualizations of how scientists represent the dark matter</em>
 </p>
 
-Looking at different images the scientist use to represent dark matter we immediatly tought that the *perlin noise* effet was the best solution to visualize the element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
+Looking at different images the scientist use to represent dark matter we immediately thought that the *perlin noise* effect was the best solution to visualize this mysterious element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
 
 <div align="center" height="50px">
     <img src="images/PerlinNoise.gif" style="width:60%">
 </div>
 <p align="center">
-    <em>Exemple of the fluid effect we wanted to reproduce</em>
+    <em>Example of the fluid effect we wanted to reproduce</em>
 </p>
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
@@ -107,7 +107,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
     <em>Preview of the dimension of the planet the user is about to drop</em>
 </p>
 
-2. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase  starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar is another visual feedback value, especially when a loading bar appears. In addition, the speed increase is also displayed in the console, highlighting with the text the change.
+2. The planets fluctuate at different speeds once the users planetary system is loaded into the galaxy. The speed increase  starts when the spacebar is pressed and increases incrementally until the loading is successful. If the user releases the key, the speed decreases until it returns to that before the action. The action of pressing the spacebar is another visual feedback value, especially when a loading bar appears. In addition, the speed increase is also displayed in the console, highlighting the change with the text.
 
 3. The console element on one side of the screen helps to create a simple but very direct way of giving information and instructions. It recalls the typical aesthetics of the terminals, remaining in accordance with the simple style used on the site.
 
@@ -118,7 +118,7 @@ In contrast with this, all the other elements in the canvas are regular and defi
     <em>Letter flipping animation</em>
 </p>
 
-4. The interaction with the camera is seen as an oxymoron because the users as to cover the camera to discover the dark matter. In has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what he can see.
+4. The interaction with the camera is seen as an oxymoron because the user has to cover the webcam to discover the dark matter. It has a strong metaphorical meaning since the user itself is taught to go further than his own senses and try to think about what changed. As scientists did with their instruments, the visitor learns to adopt another point of view and actually realizes that there is more than what we can see.
 
 <div align="center">
     <img src="images/CoverWebcam.gif" style="width:60%">
@@ -302,8 +302,31 @@ P: We didn't know how to reproduce the flipping animation we wanted to add to th
 S: We created an ```ìterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
+For each step we created a function to call the ```letterShuffle()``` and the autoscrolling effect for the text that overfloaded. As you can notice from the code below, in ```each nextSpan``` function (1,2,3) we declared the increasing variable to add to the class ```span``` (so it can be writtten with the animation) and the clas ``ìs-visible```.
+
 ```js
-function easy
+function nextSpan(){   
+        iterator++;    
+//        textEnd++;
+
+    
+    if (iterator < 6){
+    
+     var $parentDiv = $('#sketch2'),
+        $innerListItem =  $(".span" + iterator);
+        
+        console.log("finito", iterator);
+        $innerListItem.shuffleLetters({
+            "callback": nextSpan
+        });  
+        
+    }
+    
+      setInterval(function(){
+          if (iterator < 6){
+                $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
+          }
+        }, 1000);
 
 ```
 
