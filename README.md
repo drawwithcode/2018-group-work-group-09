@@ -302,8 +302,31 @@ P: We didn't know how to reproduce the flipping animation we wanted to add to th
 S: We created an ```ìterator``` as a variable and created a ```for```cicle to call the animation for each span.
 We took inspiration from [this](https://codepen.io/dtab428/pen/eWVOOy) animation and [this](https://web.archive.org/web/20180804022116/http://leonardo-angelucci.ch/).
 
+For each step we created a function to call the ```letterShuffle()``` and the autoscrolling effect for the text that overfloaded. As you can notice from the code below, in ```each nextSpan``` function (1,2,3) we declared the increasing variable to add to the class ```span``` (so it can be writtten with the animation) and the clas ``ìs-visible```.
+
 ```js
-function easy
+function nextSpan(){   
+        iterator++;    
+//        textEnd++;
+
+    
+    if (iterator < 6){
+    
+     var $parentDiv = $('#sketch2'),
+        $innerListItem =  $(".span" + iterator);
+        
+        console.log("finito", iterator);
+        $innerListItem.shuffleLetters({
+            "callback": nextSpan
+        });  
+        
+    }
+    
+      setInterval(function(){
+          if (iterator < 6){
+                $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top + $innerListItem.outerHeight());
+          }
+        }, 1000);
 
 ```
 
