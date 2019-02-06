@@ -18,6 +18,7 @@ function timeIt() {
 }
 
 
+
 // //FUNCTION PREVIEW
 function PlanetPrev(_x, _y, _size) {
   this.x = _x;
@@ -38,33 +39,26 @@ function PlanetPrev(_x, _y, _size) {
    distance = dist(mouseX, mouseY, width / 2, height / 2);
    mappedDistance = map(distance, 0, canvasDimension, 0.01, 0.08);
    var reald = 0.1 - mappedDistance;
-   //console.log(distance);
-   //console.log(reald);
-   //adding a new planet
    //stop producing planets after the upload
    if (uploaded === false && distance < canvasDimension && distance >= 50) {
      //animation
-     //burst.play();
      circ.play();
      var coords = {
        x: mouseX,
        y: mouseY
      };
      var endSize = map(pressSize, 0, 28, 3, 45);
-     //var endAnimation =  map(pressSize, 0, 28, 800,2000);
      var animationSize = {
        radius: {
          0: endSize
        }
      };
-     //var animationTime = {duration: endAnimation};
-     //burst.tune(coords);
+
      circ.tune(coords);
      circ.tune(animationSize);
-     //circ.tune(animationTime);
      newPlanet = new Planet(mouseX, mouseY, pressSize, reald);
      planets.push(newPlanet);
-     //aggiungo valore ad un counter che mi azionerà display
+     //adding value to a counter to execute the display method
      clicckato++;
    }
    //riporto a zero durata mouse pressed
