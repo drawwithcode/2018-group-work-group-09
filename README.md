@@ -142,7 +142,7 @@ S: We decided to use the *html* language and *css* attributes to create a new te
 
 ```
 #### Planet's previews size
-P: During the first step of the experience we decided to give the possibility to user to create planets of different sizes according to the pressure time of the input.  
+P: During the first step of the experience we decided to give to the user the possibility to create planets of different sizes,  according to the pressure time of the input.  
 
 <p align="center"> <img src="images/planetPrev.gif" style="width:60%"></p>
 
@@ -170,9 +170,9 @@ function timeIt() {
 ```
 
 #### Planet's speed and distance from the sun
-P: We wanted that the user could make experience of the third Kepler law in a simplified way. Planets more distant from the sun rotate slower than the closest one.  
+P: We wanted that the user could make experience of the third Kepler's law in a simplified way. The planets more distant from the sun rotate slower than the closest one.  
 
-S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1 that is the maximum speed without incur in strange visual effects due to the frame count speed . Once obtained that value it would be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
+S: We mapped the distance of the mouse position from the center of the sketch (where the sun is located). After that we subtract this value to 0.1, that is the maximum speed rate possible without incur in annoying visual effects due to the frame count. Once obtained that value it will be set as property in the relative instance. It increments the value of the rotation in the newPlanet.display method.
 
 ```js
 function mouseReleased () {
@@ -214,7 +214,7 @@ P: In ours plans after the upload the speeds of planets increment. We liked the 
 
 <p align="center"> <img src="images/barSpeed.gif" style="width:60%"></p>
 
-S: Using the keyboard the user is allowed to execute the uploadGalaxy function every 30 milliseconds. This function increases the variable "completedAnimation" that will be used to understand at which point of the upload is the animation. Everytime that this function is executed the method ".setIncremento" modify a property that increments the speed in all the newPlanets instances stored in "planets".
+S: Using the keyboard the user is allowed to execute the "uploadGalaxy" function every 30 milliseconds. This function increases the variable "completedAnimation" that will be used to understand at which point of the upload is the animation. Everytime that this function is executed the method ".setIncremento" modify a property that increments the speed in all the newPlanets instances stored in "planets".
 To reverse the animation we subtract the same increment to the variables.  
 
 ```js
