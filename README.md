@@ -82,7 +82,7 @@ Dark matter is an invisible and so undefined form that probably permeates all th
     <img src="images/StaticDarkMatter_2.jpg" width="30%">
 </div>
 <p align="center">
-    <em >Different visualizations of how scientists represent the dark matter</em>
+    <em >Different visualizations of how scientists represent the dark matter taken from <a href="https://newscenter.lbl.gov/2017/06/28/dark-matter-day-is-approaching-but-dont-be-afraid-of-the-dark">here</a>, <a href="https://www.extremetech.com/extreme/230715-why-gravitational-wave-detection-may-have-also-revealed-dark-matter">here</a> and <a href="https://www.newyorker.com/tech/annals-of-technology/dark-matter-gets-its-day">here.</a></em>
 </p>
 
 Looking at different images the scientists use to represent dark matter we immediately thought that the *perlin noise* effect was the best solution to visualize this mysterious element. But since we were not sure about the final effect among our synthesized elements we though that the creation of something with no form, and distributed in all of the sketch was a better alternative.
@@ -91,7 +91,7 @@ Looking at different images the scientists use to represent dark matter we immed
     <img src="images/PerlinNoise.gif" style="width:60%">
 </div>
 <p align="center">
-    <em>Example of the fluid effect we wanted to reproduce</em>
+    <em>Example of the fluid effect we wanted to reproduce. We found it <a href="https://codepen.io/longc/pen/RpyyjW">here.</a></em>
 </p>
 
 In contrast with this, all the other elements in the canvas are regular and defined shapes.
@@ -306,8 +306,7 @@ For each step we created a function to call the ```letterShuffle()``` and the au
 
 ```js
 function nextSpan(){   
-        iterator++;    
-//        textEnd++;
+        iterator++;
 
     
     if (iterator < 6){
